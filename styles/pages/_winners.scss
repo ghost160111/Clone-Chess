@@ -1,0 +1,393 @@
+.prize-amount-2 {
+  background: linear-gradient(
+    360deg,
+    #a6875b 25%,
+    #ffefa9 65.8%,
+    #b08e4e 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  text-shadow: 0px 0px 16px
+    rgba(0, 0, 0, 0.24);
+}
+
+.prize-fond__intro {
+  & {
+    z-index: 0;
+    position: relative;
+  }
+  &::before {
+    content: "";
+    background-image: radial-gradient(
+      68.21% 68.21% at 50% 50%,
+      rgba(15, 17, 17, 0) 0,
+      #0f1111 100%
+    );
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+}
+
+.winners-section--padding {
+  padding: var(--padding-700);
+}
+@media screen and (max-width: 1400px) {
+  .winners-section--padding {
+    padding-left: var(--padding-left-right-768);
+    padding-right: var(--padding-left-right-768);
+  }
+}
+@media screen and (max-width: 700px) {
+  .winners-section--padding {
+    padding-left: var(--padding-left-right-375);
+    padding-right: var(--padding-left-right-375);
+  }
+}
+
+.rating-description {
+  & {
+    font-size: var(--font-size-18);
+    line-height: var(--font-size-24);
+    padding-bottom: 57px;
+  }
+  & > .rating-description-1 {
+    padding: 10px 733px 0px
+      10px;
+    margin: 0px 0px 15px 0px;
+  }
+  &
+    > .rating-description-list {
+    & {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      padding: 0px 0px 24px
+        10px;
+      margin: 0;
+      gap: 16px 0px;
+    }
+    li {
+      & {
+        display: flex;
+        gap: 0px 8px;
+      }
+      &::before {
+        content: "";
+        display: flex;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        background: {
+          image: url("/images/eclipseRectangle.svg");
+          repeat: no-repeat;
+          size: cover;
+          position: center;
+        }
+      }
+    }
+  }
+  & > .rating-description-2 {
+    padding: 0px 707px 0px
+      10px;
+    margin: 0px 0px 0px 0px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .rating-description {
+    & {
+      padding-left: var(--padding-left-right-375);
+      padding-right: var(--padding-left-right-375);
+    }
+    &
+      > .rating-description-1 {
+      padding: 10px 25vw 0px
+        10px;
+      margin: 0px 0px 15px 0px;
+    }
+    &
+      > .rating-description-2 {
+      padding: 10px 300px 0px
+        10px;
+      margin: 0px 0px 15px 0px;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .rating-description {
+    & {
+      font-size: var(--font-size-16);
+    }
+    &
+      > .rating-description-1 {
+      padding: 10px 7vw 0px
+        10px;
+    }
+    &
+      > .rating-description-2 {
+      padding: 10px 3vw 0px
+        10px;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .rating-description {
+    & {
+      font-size: var(--font-size-12);
+      line-height: var(--font-size-16);
+    }
+  }
+}
+
+// winners block
+.winners-tab {
+  & {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: var(--winners-tab-block-back-color);
+    font-family: #{$family-2};
+    font-weight: var(--font-weight-700);
+  }
+  .winners-tab__place {
+    & {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 177px;
+      height: 500px;
+      position: relative;
+      left: -41px;
+      transform: rotate(
+        20deg
+      );
+      @extend .h2_v3_v1;
+      background: var(--winners-tab__place);
+      color: var(--basic-white);
+    }
+    .winners-tab__place__number {
+      transform: rotate(
+          -20deg
+        )
+        translate(24px, 3px);
+    }
+  }
+  .winners-tab__participant {
+    & {
+      display: flex;
+      flex-flow: column;
+    }
+    .winners-tab__participant__name {
+      font-size: var(--font-size-48);
+      line-height: var(--font-size-48);
+      padding: 0px 47px 10px 0px;
+    }
+    .winners-tab__participant__rank {
+      font-family: #{$family-1};
+      font-weight: var(--font-weight-400);
+      font-size: var(--font-size-24);
+      line-height: var(--font-size-32);
+    }
+  }
+  .winners-tab__prize {
+    & {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      width: 27vw;
+      //width: 515px;
+      height: 500px;
+      position: relative;
+      left: 65px;
+      transform: rotate(20deg);
+      color: var(--basic-white);
+      background: #2E2E34;
+    }
+    .winners-tab__prize__text,
+    .winners-tab__prize__amount {
+      transform: rotate(-20deg);
+    }
+    .winners-tab__prize__text {
+      font-size: var(--font-size-32);
+      line-height: var(--font-size-48);
+      padding: 0px 312px 9px 0px;
+    }
+    .winners-tab__prize__amount {
+      font-size: var(--font-size-64);
+      line-height: var(--font-size-64);
+      padding: 0px 62px 3px 0px;
+    }
+  }
+}
+@media screen and (max-width: 1440px) {
+  .winners-tab {
+    .winners-tab__prize {
+      width: 35vw;
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  .winners-tab {
+    & {
+      height: 112px;
+    }
+    .winners-tab__place {
+      & {
+        font-size: var(--font-size-64);
+      }
+      .winners-tab__place__number {
+        transform: rotate(
+          -20deg
+        )
+        translate(18px, 3px);
+      }
+    }
+    .winners-tab__participant {
+      .winners-tab__participant__name {
+        font-size: var(--font-size-24);
+        line-height: var(--font-size-24);
+        padding: 0;
+      }
+      .winners-tab__participant__rank {
+        font-size: var(--font-size-16);
+        line-height: var(--font-size-16);
+      }
+    }
+    .winners-tab__prize {
+      .winners-tab__prize__text {
+        font-size: var(--font-size-16);
+        line-height: var(--font-size-16);
+        padding: 0px 140px 9px 43px;
+      }
+      .winners-tab__prize__amount {
+        font-size: var(--font-size-24);
+        line-height: var(--font-size-24);
+        padding: 0px 62px 3px 24px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .winners-tab {
+    & {
+      justify-content: flex-start;
+      height: 86px;
+    }
+    .winners-tab__participant {
+      .winners-tab__participant__name {
+        font-size: var(--font-size-20);
+        line-height: var(--font-size-24);
+        padding: 0;
+      }
+      .winners-tab__participant__rank {
+        font-size: var(--font-size-12);
+        line-height: var(--font-size-16);
+      }
+    }
+    .winners-tab__prize {
+      display: none;
+    }
+  }
+}
+.winners-tab__prize--hidden--768 {
+  & {
+    display: none;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-flow: column;
+    width: 100%;
+    min-height: 62px;
+    padding-left: 36vw;
+    background: var(--winners-tab__place);
+    font-family: #{$family-2};
+    font-weight: var(--font-weight-700);
+  }
+  .prize__text--hidden {
+    font-size: var(--font-size-14);
+    line-height: var(--font-size-14);
+  }
+  .prize__amount--hidden {
+    font-size: var(--font-size-24);
+    line-height: var(--font-size-24);
+  }
+}
+@media screen and (max-width: 600px) {
+  .winners-tab__prize--hidden--768 {
+    display: flex;
+  }
+}
+
+
+// list section
+.winners-list-section {
+  & {
+    display: flex;
+    flex-flow: column;
+  }
+  .winners-category {
+    text-align: center;
+    @extend .h3;
+  }
+  @media screen and (max-width: 1200px) {
+    .winners-category {
+      font-size: var(--font-size-48);
+      line-height: var(--font-size-48);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .winners-category {
+      font-size: var(--font-size-32);
+      line-height: var(--font-size-32);
+    }
+  }
+}
+
+// winners list
+.winners-list {
+  & {
+    display: flex;
+    flex-flow: column;
+    gap: 24px 0px;
+  }
+  li:first-child {
+    .winners-tab {
+      .winners-tab__place {
+        color: var(--winner-1-color);
+        background: linear-gradient(
+            0deg,
+            #a6875b 0%,
+            #ffefa9 54.4%,
+            #b08e4e 100%
+          ),
+          var(--winners-tab__place);
+      }
+    }
+  }
+  li:nth-child(2) {
+    .winners-tab {
+      .winners-tab__place {
+        color: var(--winner-2-color);
+        background: linear-gradient(360deg, #50596C 0%, #9EA7B8 54.4%, #4C5569 100%), var(--winners-tab__place);
+      }
+    }
+  }
+  li:nth-child(3) {
+    .winners-tab {
+      .winners-tab__place {
+        color: var(--winner-3-color);
+        background: linear-gradient(360deg, #5C4548 0%, #C1A393 54.4%, #5A4447 100%), var(--winners-tab__place);
+      }
+    }
+  }
+}
+

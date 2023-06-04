@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Шахмат - Победители</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="header__wrapper">
+            <nav class="nav">
+                <ul class="nav__list-left">
+                    <li><a class="nav__list-left__link" href="/pages/about.html" title="О турнире">О
+                            турнире</a></li>
+                    <li><a class="nav__list-left__link" href="/pages/list.html" title="Список участников">Список
+                            участников</a></li>
+                    <li><a class="nav__list-left__link" href="/pages/rules.html" title="Правила">Правила</a></li>
+                    <li><a class="nav__list-left__link" href="/pages/prizeFond.html" title="Призовой фонд">Призовой
+                            фонд</a></li>
+                </ul>
+                <ul class="nav__list-middle">
+                    <li>
+                        <a class="nav__list-middle__link logo" href="/index.html" title="Главная страница">
+                            <img class="nav__list-middle__link__logo logo__img" src="/images/logo.svg" alt="logo icon">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav__list-right">
+                    <li><a class="nav__list-right__link active-link" href="/pages/winners.html"
+                            title="Победители">Победители</a></li>
+                    <li><a class="nav__list-right__link" href="/pages/news.html" title="Новости">Новости</a>
+                    </li>
+                    <li><a class="nav__list-right__link" href="/pages/form.html" title="Обратная связь">Обратная
+                            связь</a></li>
+                    <li class="language-choose dropdown">
+                        <button class="nav__list-right__link" type="button" id="dropdownMenuButton"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            Русский
+                        </button>
+                        <ul class="nav__list-right__list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="nav__list-right__list__languages dropdown-item" href="#">O'zbekcha</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="tablet-nav" id="tablet-nav">
+                <ul class="tablet-nav__list-left" id="nav-list-left">
+                    <li><a class="tablet-nav__list-left" href="/pages/about.html">О турнире</a></li>
+                    <li><a class="tablet-nav__list-left" href="/pages/list.html">Список участников</a></li>
+                </ul>
+                <ul class="tablet-nav__list-middle" id="nav-list-middle">
+                    <li>
+                        <a class="tablet-nav__list-middle__link logo" href="/index.html" title="Главная страница">
+                            <img class="tablet-nav__list-middle__link__logo logo__img" src="/images/logo.svg"
+                                alt="logo icon">
+                        </a>
+                    </li>
+                </ul>
+                <div class="tablet-nav__right-block">
+                    <div class="tablet-nav__right-block__burger">
+                        <button class="tablet-nav__right-block__burger__btn-open" id="burger" type="button"
+                            title="Открыть меню" onclick="burger('flex', 'blur(4px)')"></button>
+                    </div>
+                    <ul class="tablet-nav__right-block__list sidebar--animation" id="sidebar">
+                        <li>
+                            <div class="tablet-nav__right-block__list__sub-block">
+                                <a class="tablet-nav__right-block__list__sub-block__link logo" href=""
+                                    title="Главная страница">
+                                    <img class="logo__img" src="/images/logo.svg" alt="logo">
+                                </a>
+                                <button class="tablet-nav__right-block__list__sub-block__btn-close" type="button"
+                                    title="Закрыть меню" onclick="burger('none', 'blur(0px)')"></button>
+                            </div>
+                        </li>
+                        <li class="middle-child">
+                            <ul class="middle-child__list">
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/about.html">О
+                                        турнире</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/list.html">Список
+                                        участников</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/rules.html">Правила</a>
+                                </li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/prizeFond.html">Призовой
+                                        фонд</a></li>
+                                <li><a class="tablet-nav__right-block__list__link"
+                                        href="/pages/winners.html">Победители</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/news.html">Новости</a>
+                                </li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/form.html">Обратная
+                                        связь</a></li>
+                            </ul>
+                        </li>
+                        <li class="language-choose dropdown">
+                            <button class="nav__list-right__link" type="button" id="dropdownMenuButton"
+                                data-mdb-toggle="dropdown" aria-expanded="false">
+                                Русский
+                            </button>
+                            <ul class="nav__list-right__list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="nav__list-right__list__languages dropdown-item" href="#">O'zbekcha</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content" id="content">
+        <div class="prize-fond">
+            <div class="prize-fond__intro">
+                <h1 class="prize-fond__intro__title">Победители</h1>
+                <p class="prize-fond__intro__sub-title">Призовой фонд</p>
+                <figure class="prize-fond__intro__total-prize-amount prize-amount-2">330 000 000 сум</figure>
+            </div>
+            <section class="prize-fond__prize-section winners-section--padding">
+                <section class="rating-description">
+                    <p class="rating-description-1">
+                        Победители турнира определяются по количеству набранных ими баллов,
+                        в случае ничьи учитываются следующие дополнительные показатели:
+                    </p>
+                    <ul class="rating-description-list">
+                        <li>встреча между собой (если все участники играли между собой),</li>
+                        <li>коэффициент Бухгольца,</li>
+                        <li>средний коэффициент Бухгольца,</li>
+                        <li>рейтинг перформанс,</li>
+                        <li>количество побед</li>
+                    </ul>
+                    <p class="rating-description-2">
+                        Победители и призёры турнира будут награждены призом хокима Ташкента,
+                        дипломами, медалями, а также, денежными премиями.
+                    </p>
+                </section>
+                <div id="carouselExampleIndicators" class="prize-slider carousel slide" data-bs-ride="carousel"
+                    data-bs-interval="false">
+                    <div class="prize-winner-navigation carousel-indicators">
+                        <button id="indicator-1" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="0" class="listing-btn active" aria-current="true"
+                            aria-label="Slide 1">Профессиональная мужская группа</button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            class="listing-btn" aria-label="Slide 2">Профессиональном женская группа</button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            class="listing-btn" aria-label="Slide 3">Любительская мужская группа</button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            class="listing-btn" aria-label="Slide 4">Любительская женская группа</button>
+                    </div>
+                    <div class="prize-carousel carousel-inner">
+                        <div class="winners-item prize-carousel-item carousel-item active">
+                            <section class="winners-list-section">
+                                <h3 class="winners-category">Мужчины профессионалы</h3>
+                                <ul class="winners-list">
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">1</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">2</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">3</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">4</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">5</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">6</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">7</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="prize-carousel-item carousel-item">
+                            <section class="winners-list-section">
+                                <h3 class="winners-category">Женщины профессионалы</h3>
+                                <ul class="winners-list">
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">1</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">2</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">3</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">4</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">5</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">6</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">7</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="prize-carousel-item carousel-item">
+                            <section class="winners-list-section">
+                                <h3 class="winners-category">Любители мужчины</h3>
+                                <ul class="winners-list">
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">1</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">2</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">3</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">4</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">5</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">6</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">7</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="prize-carousel-item carousel-item">
+                            <section class="winners-list-section">
+                                <h3 class="winners-category">Любители женщины</h3>
+                                <ul class="winners-list">
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">1</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">2</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">3</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">4</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">5</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">6</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <article class="winners-tab">
+                                            <div class="winners-tab__place">
+                                                <span class="winners-tab__place__number">7</span>
+                                            </div>
+                                            <div class="winners-tab__participant">
+                                                <span class="winners-tab__participant__name">Пулатов Мавлонбек мухторжон
+                                                    угли</span>
+                                                <span class="winners-tab__participant__rank">Профессионал</span>
+                                            </div>
+                                            <div class="winners-tab__prize">
+                                                <span class="winners-tab__prize__text">Призовые</span>
+                                                <span class="winners-tab__prize__amount">50 000 000 сум</span>
+                                            </div>
+                                        </article>
+                                        <div class="winners-tab__prize--hidden--768">
+                                            <span class="prize__text--hidden">Призовые</span>
+                                            <span class="prize__amount--hidden">50 000 000 сум</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__block-1">
+                <ul class="block-1__list">
+                    <li><a class="block-1__list__link" href="/pages/about.html">О турнире</a></li>
+                    <li><a class="block-1__list__link" href="/pages/rules.html">Правила</a></li>
+                    <li><a class="block-1__list__link" href="/pages/winners.html">Победители</a></li>
+                    <li><a class="block-1__list__link" href="/pages/form.html">Обратная связь</a></li>
+                    <li><a class="block-1__list__link" href="/pages/list.html">Список участников</a></li>
+                    <li><a class="block-1__list__link" href="/pages/prizeFond.html">Призовой фонд</a></li>
+                    <li><a class="block-1__list__link" href="/pages/news.html">Новости</a></li>
+                </ul>
+            </div>
+            <div class="footer__block-2">
+                <ul class="block-2__list">
+                    <li><a class="block-2__list__tel-us" href="tel:+998970000000" title="Позвонить">+998970000000</a>
+                    </li>
+                    <li><a class="block-2__list__email-us" href="mailto:help@chess-tashkent.uz"
+                            title="Написать email">help@chess-tashkent.uz</a></li>
+                </ul>
+                <ul class="block-2__list-2">
+                    <li><a class="block-2__list-2__link" href="https://www.tashkent.uz/"><img
+                                src="/images/logoFooter.svg" alt=""></a></li>
+                    <li><a class="block-2__list-2__link" href="https://digitaltashkent.uz/"><img
+                                src="/images/logoFooter2.svg" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="footer__block-3">
+                <ul class="block-3__list">
+                    <li><a class="block-3__list__link" href="https://www.tashkent.uz/"><img src="/images/logoFooter.svg"
+                                alt=""></a></li>
+                    <li><a class="block-3__list__link" href="https://digitaltashkent.uz/"><img
+                                src="/images/logoFooter2.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom-block">
+            <span class="footer__bottom-block__acknowlegdement">
+                При полном или частичном использовании и цитировании материалов, опубликованных на сайте <a
+                    class="link--text-decoration" href="https://chess.tashkent.uz/">сhess.tashkent.uz</a>, ссылка
+                обязательна
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    </script>
+    <script src="/scripts/burgerMenu.js"></script>
+    <script src="/scripts/slider.js"></script>
+</body>
+
+</html>

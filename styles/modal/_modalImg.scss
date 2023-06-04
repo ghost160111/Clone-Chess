@@ -1,0 +1,122 @@
+///* Модальный (фон) */
+//.modal {
+//  display: none;
+//  /* Скрыто по умолчанию */
+//  position: fixed;
+//  /* Оставаться на месте */
+//  z-index: 1;
+//  /* Сидеть на вершине */
+//  padding-top: 100px;
+//  /* Расположение коробки */
+//  left: 0;
+//  top: 0;
+//  width: 100%;
+//  /* Полная ширина */
+//  height: 100%;
+//  /* Полный высота */
+//  overflow: auto;
+//  /* Включите прокрутку, если это необходимо */
+//  background-color: rgb(
+//    0,
+//    0,
+//    0
+//  );
+//  /* Цвет запасной вариант */
+//  background-color: rgba(
+//    0,
+//    0,
+//    0,
+//    0.9
+//  );
+//  /* Черный с непрозрачностью */
+//}
+//
+///* Модальное содержание (изображение) */
+//.modal-content {
+//  margin: auto;
+//  display: block;
+//  width: 100%;
+//  max-width: 1320px;
+//}
+//
+///* Заголовок модального изображения ( текст изображения) - та же ширина, что и изображение */
+//#caption {
+//  margin: auto;
+//  display: block;
+//  width: 80%;
+//  max-width: 700px;
+//  text-align: center;
+//  color: #ccc;
+//  padding: 10px 0;
+//  height: 150px;
+//}
+//
+///* Добавить анимацию - величение модели */
+//.modal-content,
+//#caption {
+//  animation-name: zoom;
+//  animation-duration: 0.6s;
+//}
+//
+//@keyframes zoom {
+//  from {
+//    transform: scale(0);
+//  }
+//
+//  to {
+//    transform: scale(1);
+//  }
+//}
+//
+///* Кнопка закрытия */
+//.close {
+//  position: absolute;
+//  top: 46px;
+//  right: 17px;
+//  color: #f1f1f1;
+//  font-size: 40px;
+//  font-weight: bold;
+//  transition: 0.3s;
+//  z-index: 100;
+//}
+//
+//.close:hover,
+//.close:focus {
+//  color: #bbb;
+//  text-decoration: none;
+//  cursor: pointer;
+//}
+//
+///* 100% Ширина изображения на меньших экранах */
+//@media only screen and (max-width: 700px) {
+//  .modal-content {
+//    width: 100%;
+//  }
+//}
+//
+
+//img[tabindex="0"] {
+//  cursor: zoom-in;
+//}
+//img[tabindex="0"]:focus {
+//  position: fixed;
+//  z-index: 1000;
+//  top: 10%;
+//  left: 20%;
+//  bottom: 0;
+//  right: 0;
+//  width: 150%;
+//  height: 150%;
+//  box-shadow: 100px 100px 100px 100px #000;
+//}
+////img[tabindex="0"]:focus,  /* убрать строку, если не нужно, чтобы при клике на увеличенное фото, оно возвращалось в исходное состояние */
+//img[tabindex="0"]:focus ~ * {
+//  pointer-events: none;
+//  cursor: zoom-out;
+//}
+//@media screen and (max-width: 1200px) {
+//  img[tabindex="0"]:focus {
+//    width: 10vw;
+//    height: 10vw;
+//  }
+//}

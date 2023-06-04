@@ -1,2 +1,3 @@
 # Clone-Chess
-Clone of chess.tashkent.uz
+
+Clone of `chess.tashkent.uz`

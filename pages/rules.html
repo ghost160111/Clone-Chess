@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Шахмат - Правила</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="header__wrapper">
+            <nav class="nav">
+                <ul class="nav__list-left">
+                    <li><a class="nav__list-left__link" href="/pages/about.html" title="О турнире">О
+                            турнире</a></li>
+                    <li><a class="nav__list-left__link" href="/pages/list.html" title="Список участников">Список участников</a></li>
+                    <li><a class="nav__list-left__link active-link" href="/pages/rules.html" title="Правила">Правила</a>
+                    </li>
+                    <li><a class="nav__list-left__link" href="/pages/prizeFond.html" title="Призовой фонд">Призовой
+                            фонд</a></li>
+                </ul>
+                <ul class="nav__list-middle">
+                    <li>
+                        <a class="nav__list-middle__link logo" href="/index.html" title="Главная страница">
+                            <img class="nav__list-middle__link__logo logo__img" src="/images/logo.svg" alt="logo icon">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav__list-right">
+                    <li><a class="nav__list-right__link" href="/pages/winners.html" title="Победители">Победители</a></li>
+                    <li><a class="nav__list-right__link" href="/pages/news.html" title="Новости">Новости</a>
+                    </li>
+                    <li><a class="nav__list-right__link" href="/pages/form.html" title="Обратная связь">Обратная
+                            связь</a></li>
+                    <li class="language-choose dropdown">
+                        <button class="nav__list-right__link" type="button" id="dropdownMenuButton"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            Русский
+                        </button>
+                        <ul class="nav__list-right__list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="nav__list-right__list__languages dropdown-item" href="#">O'zbekcha</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="tablet-nav" id="tablet-nav">
+                <ul class="tablet-nav__list-left" id="nav-list-left">
+                    <li><a class="tablet-nav__list-left" href="/pages/about.html">О турнире</a></li>
+                    <li><a class="tablet-nav__list-left" href="/pages/list.html">Список участников</a></li>
+                </ul>
+                <ul class="tablet-nav__list-middle" id="nav-list-middle">
+                    <li>
+                        <a class="tablet-nav__list-middle__link logo" href="/index.html" title="Главная страница">
+                            <img class="tablet-nav__list-middle__link__logo logo__img" src="/images/logo.svg"
+                                alt="logo icon">
+                        </a>
+                    </li>
+                </ul>
+                <div class="tablet-nav__right-block">
+                    <div class="tablet-nav__right-block__burger">
+                        <button class="tablet-nav__right-block__burger__btn-open" id="burger" type="button"
+                            title="Открыть меню" onclick="burger('flex', 'blur(4px)')"></button>
+                    </div>
+                    <ul class="tablet-nav__right-block__list sidebar--animation" id="sidebar">
+                        <li>
+                            <div class="tablet-nav__right-block__list__sub-block">
+                                <a class="tablet-nav__right-block__list__sub-block__link logo" href=""
+                                    title="Главная страница">
+                                    <img class="logo__img" src="/images/logo.svg" alt="logo">
+                                </a>
+                                <button class="tablet-nav__right-block__list__sub-block__btn-close" type="button"
+                                    title="Закрыть меню" onclick="burger('none', 'blur(0px)')"></button>
+                            </div>
+                        </li>
+                        <li class="middle-child">
+                            <ul class="middle-child__list">
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/about.html">О
+                                        турнире</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/list.html">Список участников</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/rules.html">Правила</a>
+                                </li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/prizeFond.html">Призовой
+                                        фонд</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/winners.html">Победители</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/news.html">Новости</a>
+                                </li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/form.html">Обратная
+                                        связь</a></li>
+                            </ul>
+                        </li>
+                        <li class="language-choose dropdown">
+                            <button class="nav__list-right__link" type="button" id="dropdownMenuButton"
+                                data-mdb-toggle="dropdown" aria-expanded="false">
+                                Русский
+                            </button>
+                            <ul class="nav__list-right__list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="nav__list-right__list__languages dropdown-item" href="#">O'zbekcha</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content" id="content">
+        <section class="rules">
+            <h1 class="rules__title">
+                ПОЛОЖЕНИЕ МЕЖДУНАРОДНОГО ТУРНИРА
+                ПО ШАХМАТАМ ЗА ПРИЗ ХОКИМА ТАШКЕНТА
+                TASHKENT OPEN
+            </h1>
+            <p class="rules__description">
+                Данное положение определяет порядок организации и проведения турнира, в соответствии с исполнением
+                требований Закона Республики Узбекистан “О физической культуре и спорте”, задач, определёнными в
+                постановлении Президента Республики Узбекистан № ПП-4954 от 14 января 2021 года “О мерах по дальнейшему
+                развитию и популяризации шахмат, а также совершенствованию системы подготовки шахматистов”, с целью
+                укрепления дружеских отношений среди народов.
+            </p>
+            <h2 class="rules__condition-1">
+                1. Руководство проведением турнира
+            </h2>
+            <p class="rules__condition-1-description">
+                Общее руководство и проведение турнира реализуется хокимиятом Ташкента и Шахматной федерацией
+                Узбекистана, а также шахматной школой Sky Chess. Проведение турнира непосредственно возлагается на
+                судейский совет, состав которого утверждается Шахматной федерацией Узбекистана путём согласования с
+                хокимиятом Ташкента.
+            </p>
+            <h2 class="rules__condition-2">
+                2. Порядок и место проведения турнира
+            </h2>
+            <p class="rules__condition-2-description">
+                К проведению турнира привлекается непосредственно судейский совет<br>
+                Турнир проводится в 4-х группах.<br>
+                А. Мужчины профессионалы <br>
+                Б. Женщины профессионалы<br>
+                С. Мужчины любители<br>
+                Д. Женщины любители<br>
+                <br>
+                Турнир проводится 2-мя этапами:<br>
+                1-этап– отборочный этап, пройдёт на сайте chess.com (1-3 ноября) в режиме Онлайн;<br>
+                2-этап – финальный этап пройдёт в режиме офлайн;<br>
+                2-этап – пройдёт 6-7 ноября в отеле "Hilton" и стартует с 10:00 часов.<br>
+                На основании правил Международной шахматной федерации (FIDE) второй этап будет состоять из 9 туров по
+                швейцарской системе в направлении “Рапид”. Сторонам будет представлено по 15 минут, с момента первого
+                хода за каждый ход будет начисляться по 10 секунд.<br>
+                Все желающие могут принять участие на соревновании, путём регистрации через @uzshaxmatbot с 24 по 31
+                октября 2022 года.<br>
+            </p>
+            <h2 class="rules__condition-3">
+                3. Обладатели права участия на турнире
+            </h2>
+            <p class="rules__condition-3-description">
+                В профессиональной мужской группе участники-мужчины с международным рейтингом FIDE GM, IM, FM и FIDE
+                Standard выше 2000 в количестве 70 шахматистов примут участие во втором туре, зарегистрировавшись онлайн
+                через @uzshaxmatbot до 4 ноября.<br><br>
+                В профессиональной женской группе участницы с международным рейтингом FIDE GM, IM, FM и FIDE Standard
+                выше 1400 в количестве 30 шахматисток примут участие во втором туре, зарегистрировавшись онлайн через
+                @uzshaxmatbot до 4 ноября.<br><br>
+                В любительской мужской группе – 60 мужчин-шахматистов с международным рейтингом 0-1999 по стандарту
+                ФИДЕ, занявшие с 1 по 60 места по итогам первого этапа, который пройдет в режиме онлайн на сайте
+                chess.com;<br><br>
+                В любительской женской группе – 40 женщин-шахматисток с международным рейтингом 0-1399 по стандарту
+                ФИДЕ, занявшие с 1 по 40 места по итогам первого этапа, который пройдет в режиме онлайн на сайте
+                chess.com;<br><br>
+                Желающие шахматисты из зарубежных стран могут участвовать в профессиональных мужских группах FIDE GM,
+                IM, FM и профессиональных женских шахматных группах FIDE WGM, WIM, WFM.<br><br>
+                Во второй этап, по рекомендации «Шахматного клуба глухих», будут включены 15 парашахматистов с
+                ограниченными возможностями и с инвалидностью, с высоким рейтингом ФИДЕ из Республики Каракалпакстан,
+                областей республики и города Ташкента.<br><br>
+                В случае превышения норм количества участников в профессиональной мужской и женской группах,
+                определенных данным Положением, будут отобраны шахматисты с высоким рейтингом.<br><br>
+            </p>
+            <h2 class="rules__condition-4">
+                4. Отбор и награждение победителей турнира
+            </h2>
+            <p class="rules__condition-4-description">
+                Отборочный этап турнира пройдет онлайн на платформе chess.com в форме блиц (3+2), а финальный 2-этап
+                пройдет по форме Рапид (15+10)
+                по швейцарской системе. Победители турнира определяются по количеству набранных ими баллов, в случае
+                ничьи учитываются следующие дополнительные показатели:<br><br>
+
+                - встреча между собой (если все участники играли между собой),<br>
+                - коэффициент Бухгольца,<br>
+                - средний коэффициент Бухгольца,<br>
+                - рейтинг перформанс,<br>
+                - количество побед.<br><br>
+
+                Победители и призёры турнира будут награждены призом хокима Ташкента, дипломами, медалями, а также,
+                денежными премиями.
+            </p>
+            <table class="rules__condition-4__table">
+                <thead>
+                    <tr class="table__row-1">
+                        <th class="table__header-cell">Призовой фонд 330 000 000 сумов</th>
+                        <th class="table__header-cell"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table__row-2">
+                        <td class="table__data-cell">Профессиональная мужская группа</td>
+                        <td class="table__data-cell">50.000.000 сумов</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data-cell">1-место</td>
+                        <td class="table__data-cell">50.000.000 сумов</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data-cell">2-место</td>
+                        <td class="table__data-cell">50.000.000 сумов</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data-cell">3-место</td>
+                        <td class="table__data-cell">50.000.000 сумов</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data-cell">4-место</td>
+                        <td class="table__data-cell">50.000.000 сумов</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data-cell">5-место</td>
+                        <td class="table__data-cell">50.000.000 сумов</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data-cell">6-место</td>
+                        <td class="table__data-cell">50.000.000 сумов</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data-cell">7-место</td>
+                        <td class="table__data-cell">50.000.000 сумов</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data-cell">1-место среди ветеранов (60 лет и старше)</td>
+                        <td class="table__data-cell">50.000.000 сумов</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data-cell">1-место до 20 лет</td>
+                        <td class="table__data-cell">50.000.000 сумов</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data-cell">1-место до 16 лет</td>
+                        <td class="table__data-cell">50.000.000 сумов</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data-cell">1-место до 12 лет</td>
+                        <td class="table__data-cell">50.000.000 сумов</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__data-cell">Итого:</td>
+                        <td class="table__data-cell">142 000 000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="rules__condition-4-table-bottom">
+                В случае равенства очков среди участников, призы не разделяются, а выдаются в соответствии с
+                вышеприведёнными коэффициентами.
+                В случае победы в двух или более номинациях, выдаётся один приз побольше или главный приз.
+            </p>
+            <h2 class="rules__condition-5">
+                5. Финансирование турнира
+            </h2>
+            <p class="rules__condition-5-description">
+                Питание, проживание и дорожные расходы спортсменов и тренеров покрываются за счёт организаций,
+                отправляющих в поездку.
+                Оплата призового фонда, расходы судей и сотрудников, приглашенных на соревнования, аренда зала, в
+                котором будут проводиться соревнования, аренда шахматного инвентаря, выплаты участникам и членам
+                судейского совета, транспортировка оборудования и другие организационные расходы производятся из средств
+                Ташкентского городского хокимията.
+            </p>
+            <h2 class="rules__condition-6">
+                6. Дресс-код
+            </h2>
+            <p class="rules__condition-6-description">
+                Во время турнира все участники должны соблюдать требования дресс-кода ФИДЕ.
+                Шорты, открытая обувь и солнцезащитные очки, спортивные головные уборы и открытая одежда запрещены.
+                Также участники должны соблюдать дресс-код на церемонии открытия и закрытия турнира.
+            </p>
+            <h2 class="rules__condition-7">
+                7. Заключительные положения
+            </h2>
+            <p class="rules__condition-7-description">
+                В Положение турнира могут внесены изменения и дополнения по решению организационного комитета.
+                Участники, не согласные с итогами турнира могут обратиться в ходе турнира к членам судейского совета.
+                После окончания игр апелляции по итогам блиц-игр по шахматам не принимаются.
+            </p>
+            <a class="download-pdf-link" href="file.pdf" rel="noopener">
+                <div class="download-pdf-component">
+                    <img class="pdf-icon" src="/images/pdfIcon.svg" alt="pdf file">
+                    <span class="file-name">Правила на Узб.pdf</span>
+                </div>
+            </a>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__block-1">
+                <ul class="block-1__list">
+                    <li><a class="block-1__list__link" href="/pages/about.html">О турнире</a></li>
+                    <li><a class="block-1__list__link" href="/pages/rules.html">Правила</a></li>
+                    <li><a class="block-1__list__link" href="/pages/winners.html">Победители</a></li>
+                    <li><a class="block-1__list__link" href="/pages/form.html">Обратная связь</a></li>
+                    <li><a class="block-1__list__link" href="/pages/list.html">Список участников</a></li>
+                    <li><a class="block-1__list__link" href="/pages/prizeFond.html">Призовой фонд</a></li>
+                    <li><a class="block-1__list__link" href="/pages/news.html">Новости</a></li>
+                </ul>
+            </div>
+            <div class="footer__block-2">
+                <ul class="block-2__list">
+                    <li><a class="block-2__list__tel-us" href="tel:+998970000000" title="Позвонить">+998970000000</a>
+                    </li>
+                    <li><a class="block-2__list__email-us" href="mailto:help@chess-tashkent.uz"
+                            title="Написать email">help@chess-tashkent.uz</a></li>
+                </ul>
+                <ul class="block-2__list-2">
+                    <li><a class="block-2__list-2__link" href="https://www.tashkent.uz/"><img
+                                src="/images/logoFooter.svg" alt=""></a></li>
+                    <li><a class="block-2__list-2__link" href="https://digitaltashkent.uz/"><img
+                                src="/images/logoFooter2.svg" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="footer__block-3">
+                <ul class="block-3__list">
+                    <li><a class="block-3__list__link" href="https://www.tashkent.uz/"><img src="/images/logoFooter.svg"
+                                alt=""></a></li>
+                    <li><a class="block-3__list__link" href="https://digitaltashkent.uz/"><img
+                                src="/images/logoFooter2.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom-block">
+            <span class="footer__bottom-block__acknowlegdement">
+                При полном или частичном использовании и цитировании материалов, опубликованных на сайте <a
+                    class="link--text-decoration" href="https://chess.tashkent.uz/">сhess.tashkent.uz</a>, ссылка
+                обязательна
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    </script>
+    <script src="/scripts/burgerMenu.js"></script>
+    <script src="/scripts/slider.js"></script>
+</body>
+
+</html>

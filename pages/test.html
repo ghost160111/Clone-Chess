@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Стиль изображения, используемого для запуска модального */
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+            height: 100%;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+    </style>
+    <title>Тест - Модальное окно</title>
+</head>
+
+<body>
+    <!-- Триггер модальный -->
+    <img id="myImg" src="/images/newsImg5.png" alt="Чемпионат игр по шахмату">
+    <!-- Модальный -->
+    <div id="myModal" class="modal">
+
+        <!-- кнопка закрытия -->
+        <span class="close">&times;</span>
+
+        <!-- Модальное содержание (изображение) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Модальная подпись (текст изображения) -->
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Получить модель
+        var modal = document.getElementById("myModal");
+
+        // Получите изображение и вставьте его внутрь модального - используйте его текст "alt" в качестве подписи
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Получить элемент <span>, который закрывает модальный
+        var span = document.getElementsByClassName("close")[0];
+
+        // Когда пользователь нажимает на <span> (x), закройте модальное окно
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

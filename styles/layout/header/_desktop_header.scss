@@ -1,0 +1,297 @@
+@import "../mixins";
+
+.header {
+  & {
+    min-height: 104px;
+    z-index: 100;
+    background: none;
+    display: block;
+    position: relative;
+  }
+  .header__wrapper {
+    padding: 0px
+      calc(50% - 700px);
+  }
+}
+
+.logo {
+  &:hover {
+    border: none;
+  }
+}
+
+.nav {
+  & {
+    @include grid-property(
+      $grid-prop: grid,
+      $grid-template-columns:
+        45% 11% 43.5%
+    );
+    min-height: 104px;
+  }
+  .nav__list-left,
+  .nav__list-right {
+    @include flex-property(
+      $flex-prop: flex,
+      $flex-flow: row,
+      $x: left,
+      $y: center,
+      $wrap: wrap,
+      $gap: 0 25px
+    );
+  }
+  .nav__list-middle {
+    & {
+      @include flex-property(
+        $flex-prop: flex,
+        $x: center,
+        $y: center
+      );
+    }
+  }
+  .nav__list-left {
+    padding: 0 0 0 10px;
+  }
+  .nav__list-right {
+    & {
+      gap: 0 27px;
+      justify-content: right;
+    }
+  }
+}
+
+.language-choose {
+  & {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .nav__list-right__link {
+    & {
+      all: unset;
+      cursor: pointer;
+      @include flex-property(
+        $flex-prop: flex,
+        $x: center,
+        $y: center,
+        $gap: 0 7px
+      );
+    }
+    &:hover {
+      & {
+        color: #d8d8d8;
+        //transition: all 0.3s ease;
+      }
+    }
+    &::after {
+      content: "";
+      width: 15px;
+      height: 15px;
+      background: {
+        image: url("/images/arrowDown.svg");
+        repeat: no-repeat;
+        position: center;
+        size: 10px;
+      }
+    }
+  }
+  .lang-list {
+    display: none;
+    width: 30px;
+  }
+  .nav__list-right__list {
+    & {
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      text-align: center;
+      background: none;
+      color: white;
+      border: 2px solid grey;
+      max-height: 150px;
+      padding: 0 0 0 0;
+      border-radius: 5px;
+      position: absolute;
+      overflow-x: auto;
+      overflow-y: auto;
+    }
+    @keyframes choose-lang-hover-in {
+      from {
+        transform: translateY(30px);
+        filter: opacity(0);
+      }
+      to {
+        transform: translateY(0px);
+        filter: opacity(1);
+      }
+    }
+    @keyframes choose-lang-hover-out {
+      from {
+        transform: translateY(0px);
+        filter: opacity(1);
+      }
+      to {
+        transform: translateY(30px);
+        filter: opacity(0);
+      }
+    }
+    li {
+      .nav__list-right__list__languages {
+        & {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          color: var(--basic-white);
+          min-width: 70px;
+          max-width: 100px;
+          height: 30px;
+          padding: 0;
+          cursor: pointer;
+          @extend .tablet-regular;
+        }
+        &:hover {
+          background: grey;
+          color: white;
+        }
+        &:active {
+          filter: opacity(0.7);
+        }
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  min-width: 70px;
+  max-width: 100px;
+  animation: choose-lang-hover-out 0.5s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  animation: choose-lang-hover-in 0.5s ease;
+}
+
+.dropdown-item {
+  all: unset;
+}
+
+.tablet-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 1400px) {
+  .nav {
+    @include flex-property(
+      $flex-prop: flex,
+      $x: space-between,
+      $y: center
+    );
+  }
+}
+
+@media only screen and (max-width: 1171px) {
+  .nav {
+    display: none;
+  }
+  .header {
+    min-height: 64px;
+  }
+  .tablet-nav {
+    @include grid-property(
+      $grid-template-columns: 46% 8% 46%
+    );
+    .logo {
+      .logo__img {
+        width: 61.67px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    background: black;
+  }
+  .nav {
+    display: none;
+  }
+  .tablet-nav {
+    & {
+      @include flex-property(
+        $x: space-between,
+      );
+    }
+    .tablet-nav__list-left {
+      display: none;
+    }
+    .tablet-nav__list-middle {
+      li {
+        .tablet-nav__list-middle__link {
+          margin: 0 0 0 16px;
+        }
+      }
+    }
+    & > .tablet-nav__right-block {
+      .tablet-nav__right-block__burger {
+        .tablet-nav__right-block__burger__btn-open {
+          margin: 0 18px 0 0;
+        }
+      }
+      .tablet-nav__right-block__list {
+        & {
+          min-width: 100%;
+          padding: 16px 0 0 0;
+          background: {
+            image: url("/images/chessIcon.svg");
+            repeat: no-repeat;
+            size: contain;
+            position: 0px 565px;
+          }
+        }
+        & > li:first-child,
+        & > li:last-child {
+          width: 91%;
+        }
+        & > li:first-child {
+          .tablet-nav__right-block__list__sub-block {
+            justify-content: space-between;
+            gap: 0;
+          }
+        }
+        & > li.middle-child {
+          .middle-child__list {
+            li {
+              a {
+                padding: 10px 30px 0 18px;
+              }
+              @media only screen and (min-width: 466px) {
+                a {
+                  padding: 10px 30px 0 35px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .logo {
+      .logo__img {
+        height: 32px;
+        width: 49.33333206176758px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

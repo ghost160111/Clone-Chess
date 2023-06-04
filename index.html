@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Шахмат - Главное</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="header__wrapper">
+            <nav class="nav">
+                <ul class="nav__list-left">
+                    <li><a class="nav__list-left__link" href="/pages/about.html" title="О турнире">О турнире</a></li>
+                    <li><a class="nav__list-left__link" href="/pages/list.html" title="Список участников">Список участников</a></li>
+                    <li><a class="nav__list-left__link" href="/pages/rules.html" title="Правила">Правила</a></li>
+                    <li><a class="nav__list-left__link" href="/pages/prizeFond.html" title="Призовой фонд">Призовой фонд</a></li>
+                </ul>
+                <ul class="nav__list-middle">
+                    <li>
+                        <a class="nav__list-middle__link logo" href="/index.html" title="Главная страница">
+                            <img class="nav__list-middle__link__logo logo__img" src="/images/logo.svg" alt="logo icon">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav__list-right">
+                    <li><a class="nav__list-right__link" href="/pages/winners.html" title="Победители">Победители</a></li>
+                    <li><a class="nav__list-right__link" href="/pages/news.html" title="Новости">Новости</a></li>
+                    <li><a class="nav__list-right__link" href="/pages/form.html" title="Обратная связь">Обратная связь</a></li>
+                    <li class="language-choose dropdown">
+                        <button class="nav__list-right__link" type="button" id="dropdownMenuButton"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            Русский
+                        </button>
+                        <ul class="nav__list-right__list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="nav__list-right__list__languages dropdown-item" href="#">O'zbekcha</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="tablet-nav" id="tablet-nav">
+                <ul class="tablet-nav__list-left" id="nav-list-left">
+                    <li><a class="tablet-nav__list-left" href="/pages/about.html">О турнире</a></li>
+                    <li><a class="tablet-nav__list-left" href="/pages/list.html">Список участников</a></li>
+                </ul>
+                <ul class="tablet-nav__list-middle" id="nav-list-middle">
+                    <li>
+                        <a class="tablet-nav__list-middle__link logo" href="/index.html" title="Главная страница">
+                            <img class="tablet-nav__list-middle__link__logo logo__img" src="/images/logo.svg"
+                                alt="logo icon">
+                        </a>
+                    </li>
+                </ul>
+                <div class="tablet-nav__right-block">
+                    <div class="tablet-nav__right-block__burger">
+                        <button class="tablet-nav__right-block__burger__btn-open" id="burger" type="button"
+                            title="Открыть меню" onclick="burger('flex', 'blur(4px)')"></button>
+                    </div>
+                    <ul class="tablet-nav__right-block__list sidebar--animation" id="sidebar">
+                        <li>
+                            <div class="tablet-nav__right-block__list__sub-block">
+                                <a class="tablet-nav__right-block__list__sub-block__link logo" href=""
+                                    title="Главная страница">
+                                    <img class="logo__img" src="/images/logo.svg" alt="logo">
+                                </a>
+                                <button class="tablet-nav__right-block__list__sub-block__btn-close" type="button"
+                                    title="Закрыть меню" onclick="burger('none', 'blur(0px)')"></button>
+                            </div>
+                        </li>
+                        <li class="middle-child">
+                            <ul class="middle-child__list">
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/about.html">О турнире</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/list.html">Список участников</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/rules.html">Правила</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/prizeFond.html">Призовой фонд</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/winners.html">Победители</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/news.html">Новости</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/form.html">Обратная связь</a></li>
+                            </ul>
+                        </li>
+                        <li class="language-choose dropdown">
+                            <button class="nav__list-right__link" type="button" id="dropdownMenuButton"
+                                data-mdb-toggle="dropdown" aria-expanded="false">
+                                Русский
+                            </button>
+                            <ul class="nav__list-right__list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="nav__list-right__list__languages dropdown-item" href="#">O'zbekcha</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content" id="content">
+        <div class="home">
+            <main class="home__main">
+                <div class="home__main__title">
+                    <h1 class="home__main__title__text">Tashkent open</h1>
+                    <span class="home__main__title__text-below h1-below">международный шахматный турнир</span>
+                </div>
+                <div class="home__main__content">
+                    <video class="home__main__content__video" src="" autoplay muted
+                        loop></video>
+                </div>
+                <div class="home__main__event">
+                    <div class="home__main__event__name">
+                        <marquee class="home__main__event__name__text" direction="left" scrollamount="10" loop>
+                            <span class="home__main__event__name__text__span">6-7 ноября гостиница hilton</span>
+                            <span class="home__main__event__name__text__span">6-7 ноября гостиница hilton</span>
+                        </marquee>
+                    </div>
+                </div>
+            </main>
+            <div class="home__info">
+                <section class="home__info__statistics-section">
+                    <header class="home__info__statistics-section__header">
+                        <h2 class="home__info__statistics-section__header__title h2">Сезон 2022</h2>
+                    </header>
+                    <div class="home__info__statistics-section__content-table">
+                        <div class="home__info__statistics-section__content-table__container-1">
+                            <div class="container-1__top-block">
+                                <h3 class="container-1__top-block__title">Группы участников</h3>
+                            </div>
+                            <div class="container-1__bottom-block">
+                                <div class="container-1__bottom-block__table table--border-bottom">
+                                    <div class="container-1__bottom-block__table__header">
+                                        <h3 class="container-1__bottom-block__table__header__title">Профессионалы</h3>
+                                    </div>
+                                    <div class="container-1__bottom-block__table__content">
+                                        <div class="container-1__bottom-block__table__content__male-stat gender-stat">
+                                            <img class="male-chess-image" src="/images/goldChessKing.png" alt="prof male">
+                                            <span class="male-amount">
+                                                <span class="male-participant-amount">70</span>
+                                                <span>Мужчин</span>
+                                            </span>
+                                        </div>
+                                        <div class="container-1__bottom-block__table__content__female-stat gender-stat">
+                                            <img class="female-chess-image" src="/images/goldChessQuinn.png" alt="prof female">
+                                            <span class="female-amount">
+                                                <span class="female-participant-amount">30</span>
+                                                <span>Женщин</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="container-1__bottom-block__hr"></span>
+                                <div class="container-1__bottom-block__table table--border-top--before--after">
+                                    <div class="container-1__bottom-block__table__header">
+                                        <h3 class="container-1__bottom-block__table__header__title">Любители</h3>
+                                    </div>
+                                    <div class="container-1__bottom-block__table__content">
+                                        <div class="container-1__bottom-block__table__content__male-stat gender-stat">
+                                            <img class="male-chess-image" src="/images/silverChessKing.png" alt="amateur male">
+                                            <span class="male-amount">
+                                                <span class="male-participant-amount">60</span>
+                                                <span>Мужчин</span>
+                                            </span>
+                                        </div>
+                                        <div class="container-1__bottom-block__table__content__female-stat gender-stat">
+                                            <img class="female-chess-image" src="/images/silverChessQuinn.png" alt="amateur female">
+                                            <span class="female-amount">
+                                                <span class="female-participant-amount">40</span>
+                                                <span>Женщин</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home__info__statistics-section__content-table__container-2">
+                            <h3 class="home__info__statistics-section__content-table__container-2__title h3_v2">Призовой
+                                фонд</h3>
+                            <figure
+                                class="home__info__statistics-section__content-table__container-2__prize-amount h2_v2">
+                                330 000 000 сум</figure>
+                            <span
+                                class="home__info__statistics-section__content-table__container-2__addition-to-prize h5_v3">
+                                <span class="h5_v3_v2">+</span><span>гран-при от спонсоров</span>
+                            </span>
+                            <div class="cup-1"></div>
+                            <div class="cup-2"></div>
+                        </div>
+                        <div class="home__info__statistics-section__content-table__container-3">
+                            <div
+                                class="home__info__statistics-section__content-table__container-3__front front--padding">
+                                <div class="front__block-1 front__block-1--padding">
+                                    <h3 class="front__block-1__title h3">
+                                        <span>первый</span><span>этап турнира</span>
+                                    </h3>
+                                </div>
+                                <div class="front__block-2 front__block-2--padding">
+                                    <h3 class="front__block-2__title back__block-1__title-1--before h5_v2">онлайн</h3>
+                                    <span class="front__block-2__date back__block-1__date--margin h4_v3">1-3 ноября
+                                        отборочный тур</span>
+                                </div>
+                            </div>
+                            <div class="home__info__statistics-section__content-table__container-3__back back--padding">
+                                <div class="back__block-1 back__block-1--padding">
+                                    <h3 class="back__block-1__title back__block-1__title-1--before h5_v2">онлайн</h3>
+                                    <span class="back__block-1__date h4_v3">1-3 ноября отборочный тур</span>
+                                </div>
+                                <div class="back__block-2 back__block-2--padding">
+                                    <p class="back__block-2__description h6_v2">
+                                        Соревнование проводится на сайте chess.com в форме блиц (3+2)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home__info__statistics-section__content-table__container-4">
+                            <div
+                                class="home__info__statistics-section__content-table__container-4__front front--padding">
+                                <div class="front__block-1 front__block-1--padding">
+                                    <h3 class="front__block-1__title h3">
+                                        <span>второй</span><span>этап турнира</span>
+                                    </h3>
+                                </div>
+                                <div class="front__block-2 front__block-2--padding">
+                                    <h3 class="front__block-2__title back__block-1__title-2--before h5_v2">Hilton 10:00
+                                    </h3>
+                                    <span class="front__block-2__date h4_v3">6-7 ноября финальный тур</span>
+                                </div>
+                            </div>
+                            <div class="home__info__statistics-section__content-table__container-4__back back--padding">
+                                <div class="back__block-1 back__block-1--padding">
+                                    <h3 class="back__block-1__title back__block-1__title-2--before h5_v2">Hilton 10:00
+                                    </h3>
+                                    <span class="back__block-1__date h4_v3">6-7 ноября финальный тур</span>
+                                </div>
+                                <div class="back__block-2 back__block-2--padding">
+                                    <p class="back__block-2__description h6_v2">
+                                        Этап состоит из 9 туров по швейцарской системе по форме “Рапид” (15+10).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="home__info__news-section">
+                    <header class="home__info__news-section__header">
+                        <h2 class="home__info__news-secton__header__title">Новости</h2>
+                    </header>
+                    <div class="home__info__news-section__slider">
+                        <div class="slider">
+                            <div class="slider__carousel owl-carousel">
+                                <article class="slider__carousel__card item">
+                                    <a class="card__link" href="/pages/news.html">
+                                        <div class="card__block-1">
+                                            <h4 class="card__title">
+                                                Непомнящий остался на третьем месте в рейтинге FIDE
+                                            </h4>
+                                            <p class="card__description">
+                                                Узбекский шахматист Джавахир Синдаров остался
+                                                на третьем месте в рейтинге ФИДЕ
+                                            </p>
+                                            <span class="card__publish-date">08.11.2021</span>
+                                        </div>
+                                        <div class="card__block-2">
+                                            <img class="card__block-2__img" src="/images/sliderPhoto1.png" alt="">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="slider__carousel__card item">
+                                    <a class="card__link" href="/pages/news.html">
+                                        <div class="card__block-1">
+                                            <h4 class="card__title">
+                                                Непомнящий остался на третьем месте в рейтинге FIDE
+                                            </h4>
+                                            <p class="card__description">
+                                                Узбекский шахматист Джавахир Синдаров остался
+                                                на третьем месте в рейтинге ФИДЕ
+                                            </p>
+                                            <span class="card__publish-date">08.11.2021</span>
+                                        </div>
+                                        <div class="card__block-2">
+                                            <img class="card__block-2__img" src="/images/sliderPhoto2.png" alt="">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="slider__carousel__card item">
+                                    <a class="card__link" href="/pages/news.html">
+                                        <div class="card__block-1">
+                                            <h4 class="card__title">
+                                                Непомнящий остался на третьем месте в рейтинге FIDE
+                                            </h4>
+                                            <p class="card__description">
+                                                Узбекский шахматист Джавахир Синдаров остался
+                                                на третьем месте в рейтинге ФИДЕ
+                                            </p>
+                                            <span class="card__publish-date">08.11.2021</span>
+                                        </div>
+                                        <div class="card__block-2">
+                                            <img class="card__block-2__img" src="/images/sliderPhoto3.png" alt="">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="slider__carousel__card item">
+                                    <a class="card__link" href="/pages/news.html">
+                                        <div class="card__block-1">
+                                            <h4 class="card__title">
+                                                Непомнящий остался на третьем месте в рейтинге FIDE
+                                            </h4>
+                                            <p class="card__description">
+                                                Узбекский шахматист Джавахир Синдаров остался
+                                                на третьем месте в рейтинге ФИДЕ
+                                            </p>
+                                            <span class="card__publish-date">08.11.2021</span>
+                                        </div>
+                                        <div class="card__block-2">
+                                            <img class="card__block-2__img" src="/images/sliderPhoto3.png" alt="">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="slider__carousel__card item">
+                                    <a class="card__link" href="/pages/news.html">
+                                        <div class="card__block-1">
+                                            <h4 class="card__title">
+                                                Непомнящий остался на третьем месте в рейтинге FIDE
+                                            </h4>
+                                            <p class="card__description">
+                                                Узбекский шахматист Джавахир Синдаров остался
+                                                на третьем месте в рейтинге ФИДЕ
+                                            </p>
+                                            <span class="card__publish-date">08.11.2021</span>
+                                        </div>
+                                        <div class="card__block-2">
+                                            <img class="card__block-2__img" src="/images/sliderPhoto1.png" alt="">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="slider__carousel__card item">
+                                    <a class="card__link" href="/pages/news.html">
+                                        <div class="card__block-1">
+                                            <h4 class="card__title">
+                                                Непомнящий остался на третьем месте в рейтинге FIDE
+                                            </h4>
+                                            <p class="card__description">
+                                                Узбекский шахматист Джавахир Синдаров остался
+                                                на третьем месте в рейтинге ФИДЕ
+                                            </p>
+                                            <span class="card__publish-date">08.11.2021</span>
+                                        </div>
+                                        <div class="card__block-2">
+                                            <img class="card__block-2__img" src="/images/sliderPhoto2.png" alt="">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="slider__carousel__card item">
+                                    <a class="card__link" href="/pages/news.html">
+                                        <div class="card__block-1">
+                                            <h4 class="card__title">
+                                                Непомнящий остался на третьем месте в рейтинге FIDE
+                                            </h4>
+                                            <p class="card__description">
+                                                Узбекский шахматист Джавахир Синдаров остался
+                                                на третьем месте в рейтинге ФИДЕ
+                                            </p>
+                                            <span class="card__publish-date">08.11.2021</span>
+                                        </div>
+                                        <div class="card__block-2">
+                                            <img class="card__block-2__img" src="/images/sliderPhoto2.png" alt="">
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="line">
+                                <hr class="line__through">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="home__info__our-partners-section">
+                    <header class="home__info__our-partners-section__header">
+                        <h3 class="home__info__our-partners-section__header__title">Наши партнеры</h3>
+                    </header>
+                    <ul class="home__info__our-partners-section__list">
+                        <li>
+                            <a class="partner-link" href="">
+                                <div class="home__info__our-partners-section__list__box">
+                                    <img class="company-logo" src="/images/companyLogo1.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="partner-link" href="">
+                                <div class="home__info__our-partners-section__list__box">
+                                    <img class="company-logo" src="/images/companyLogo2.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="partner-link" href="">
+                                <div class="home__info__our-partners-section__list__box">
+                                    <img class="company-logo" src="/images/companyLogo3.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="partner-link" href="">
+                                <div class="home__info__our-partners-section__list__box">
+                                    <img class="company-logo" src="/images/companyLogo4.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="partner-link" href="">
+                                <div class="home__info__our-partners-section__list__box">
+                                    <img class="company-logo" src="/images/companyLogo5.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="partner-link" href="">
+                                <div class="home__info__our-partners-section__list__box">
+                                    <img class="company-logo" src="/images/companyLogo6.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="home__info__photogallery-section">
+                    <header class="home__info__photogallery-section__header">
+                        <h3 class="home__info__photogallery-section__header__title">Фотогалерея</h3>
+                    </header>
+                    <div class="gallery-slider">
+                        <div class="slider">
+                            <div class="slider__carousel owl-carousel">
+                                <div class="slider__carousel__card item">
+                                    <div class="card__block-2">
+                                        <img class="card__block-2__img" id="image-1" src="/images/sliderPhoto1.png" alt="" onclick="modalScreen('image-1')">
+                                    </div>
+                                </div>
+                                <div class="slider__carousel__card item">
+                                    <div class="card__block-2">
+                                        <img class="card__block-2__img" id="image-2" src="/images/sliderPhoto2.png" alt="" onclick="modalScreen('image-2')">
+                                    </div>
+                                </div>
+                                <div class="slider__carousel__card item">
+                                    <div class="card__block-2">
+                                        <img class="card__block-2__img" id="image-3" src="/images/sliderPhoto2.png" alt="" onclick="modalScreen('image-3')">
+                                    </div>
+                                </div>
+                                <div class="slider__carousel__card item">
+                                    <div class="card__block-2">
+                                        <img class="card__block-2__img" id="image-4" src="/images/sliderPhoto3.png" alt="" onclick="modalScreen('image-4')">
+                                    </div>
+                                </div>
+                                <div class="slider__carousel__card item">
+                                    <div class="card__block-2">
+                                        <img class="card__block-2__img" id="image-5" src="/images/sliderPhoto1.png" alt="" onclick="modalScreen('image-5')">
+                                    </div>
+                                </div>
+                                <div class="slider__carousel__card item">
+                                    <div class="card__block-2">
+                                        <img class="card__block-2__img" id="image-6" src="/images/sliderPhoto2.png" alt="" onclick="modalScreen('image-6')">
+                                    </div>
+                                </div>
+                                <div class="slider__carousel__card item">
+                                    <div class="card__block-2">
+                                        <img class="card__block-2__img" id="image-7" src="/images/sliderPhoto3.png" alt="" onclick="modalScreen('image-7')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <hr class="line__through">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__block-1">
+                <ul class="block-1__list">
+                    <li><a class="block-1__list__link" href="/pages/about.html">О турнире</a></li>
+                    <li><a class="block-1__list__link" href="/pages/rules.html">Правила</a></li>
+                    <li><a class="block-1__list__link" href="/pages/winners.html">Победители</a></li>
+                    <li><a class="block-1__list__link" href="/pages/form.html">Обратная связь</a></li>
+                    <li><a class="block-1__list__link" href="/pages/list.html">Список участников</a></li>
+                    <li><a class="block-1__list__link" href="/pages/prizeFond.html">Призовой фонд</a></li>
+                    <li><a class="block-1__list__link" href="/pages/news.html">Новости</a></li>
+                </ul>
+            </div>
+            <div class="footer__block-2">
+                <ul class="block-2__list">
+                    <li><a class="block-2__list__tel-us" href="tel:+998970000000" title="Позвонить">+998970000000</a></li>
+                    <li><a class="block-2__list__email-us" href="mailto:help@chess-tashkent.uz" title="Написать email">help@chess-tashkent.uz</a></li>
+                </ul>
+                <ul class="block-2__list-2">
+                    <li><a class="block-2__list-2__link" href="https://www.tashkent.uz/"><img src="/images/logoFooter.svg" alt=""></a></li>
+                    <li><a class="block-2__list-2__link" href="https://digitaltashkent.uz/"><img src="/images/logoFooter2.svg" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="footer__block-3">
+                <ul class="block-3__list">
+                    <li><a class="block-3__list__link" href="https://www.tashkent.uz/"><img src="/images/logoFooter.svg" alt=""></a></li>
+                    <li><a class="block-3__list__link" href="https://digitaltashkent.uz/"><img src="/images/logoFooter2.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom-block">
+            <span class="footer__bottom-block__acknowlegdement">
+                При полном или частичном использовании и цитировании материалов, опубликованных на сайте <a class="link--text-decoration" href="https://chess.tashkent.uz/">сhess.tashkent.uz</a>, ссылка обязательна
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    </script>
+    <script src="/scripts/burgerMenu.js"></script>
+    <script src="/scripts/slider.js"></script>
+    <script>
+        function modalScreen(id) {
+            document.getElementById(id).requestFullscreen();
+        }
+    </script>
+</body>
+
+</html>

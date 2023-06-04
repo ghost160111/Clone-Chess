@@ -1,0 +1,121 @@
+// ---- SCSS variables ---- //
+// colors
+$background-color: #0d0d0d;
+$basic-white: #ffffff;
+$basic-red: rgb(255, 0, 0);
+$link-underline: #fec43e;
+$header-background-color: #0D0D0D;
+$black-font-color: #1d1d1b;
+$scrollbar-color: rgb(63, 63, 63);
+$scrollbar-hover: rgb(44, 44, 44);
+$scrollbar-active: rgb(29, 29, 29);
+$form-blur-effect-color: #a6875b;
+$form-label-color: #9EA8AA;
+$form-input-textarea-border: #696B6B;
+$form-submit-background-color: #EBAB07;
+$form-image-dropzone-back-color: #cccccc;
+$form-image-dropzone-after-color: rgba(0, 0, 0, 0.75);
+$home-container-1-top-block-back-color: #E64011;
+$home-container-2-prize-amount-color-2: #FEBB1F;
+$home-container-3-back-color-front: #009DF8;
+$home-news-card-border-top-color: #3E4142;
+$table-head-back-color: #1e1e1e;
+$other-news-border-top-color: #626262;
+$other-news-card__block-2__description: #A7A7A7;
+$winners-tab-block-back-color: #181818;
+$winners-tab__place: #2E2E34;
+$winner-1-color: #57462d;
+$winner-2-color: #162036;
+$winner-3-color: #311D2C;
+$custom-dropdown-hover: #DDDDDD;
+
+// paddings
+$padding-700: 0 calc(50% - 700px);
+$padding-left-right-768: 24px;
+$padding-left-right-375: 16px;
+$form-page-padding: 0 calc(50% - 429px);
+
+// font sizes
+$font-size-144: 144px;
+$font-size-128: 128px;
+$font-size-120: 120px;
+$font-size-112: 112px;
+$font-size-96: 96px;
+$font-size-64: 64px;
+$font-size-48: 48px;
+$font-size-40: 40px;
+$font-size-36: 36px;
+$font-size-32: 32px;
+$font-size-24: 24px;
+$font-size-20: 20px;
+$font-size-18: 18px;
+$font-size-16: 16px;
+$font-size-14: 14px;
+$font-size-12: 12px;
+
+// font weights
+$font-weight-400: 400;
+$font-weight-600: 600;
+$font-weight-700: 700;
+
+
+// ---- CSS variables ---- //
+
+:root {
+  --background-color: #{$background-color};
+  --basic-white: #{$basic-white};
+  --link-underline: #{$link-underline};
+  --header-background-color: #{$header-background-color};
+  --black-font-color: #{$black-font-color};
+  --scrollbar-color: #{$scrollbar-color};
+  --scrollbar-hover: #{$scrollbar-hover};
+  --scrollbar-active: #{$scrollbar-active};
+  --form-blur-effect-color: #{$form-blur-effect-color};
+  --form-label-color: #{$form-label-color};
+  --form-input-textarea-border: #{$form-input-textarea-border};
+  --form-submit-background-color: #{$form-submit-background-color};
+  --form-image-dropzone-back-color: #{$form-image-dropzone-back-color};
+  --form-image-dropzone-after-color: #{$form-image-dropzone-after-color};
+  --home-container-1-top-block-back-color: #{$home-container-1-top-block-back-color};
+  --home-container-2-prize-amount-color-2: #{$home-container-2-prize-amount-color-2};
+  --home-container-3-back-color-front: #{$home-container-3-back-color-front};
+  --home-news-card-border-top-color: #{$home-news-card-border-top-color};
+  --table-head-back-color: #{$table-head-back-color};
+  --other-news-border-top-color: #{$other-news-border-top-color};
+  --other-news-card__block-2__description: #{$other-news-card__block-2__description};
+  --winners-tab-block-back-color: #{$winners-tab-block-back-color};
+  --winners-tab__place: #{$winners-tab__place};
+  --winner-1-color: #{$winner-1-color};
+  --winner-2-color: #{$winner-2-color};
+  --winner-3-color: #{$winner-3-color};
+  --custom-dropdown-color: #{$custom-dropdown-hover};
+
+  // font sizes
+  --font-size-144: #{$font-size-144};
+  --font-size-128: #{$font-size-128};
+  --font-size-120: #{$font-size-120};
+  --font-size-112: #{$font-size-112};
+  --font-size-96: #{$font-size-96};
+  --font-size-64: #{$font-size-64};
+  --font-size-48: #{$font-size-48};
+  --font-size-40: #{$font-size-40};
+  --font-size-36: #{$font-size-36};
+  --font-size-32: #{$font-size-32};
+  --font-size-24: #{$font-size-24};
+  --font-size-20: #{$font-size-20};
+  --font-size-18: #{$font-size-18};
+  --font-size-16: #{$font-size-16};
+  --font-size-14: #{$font-size-14};
+  --font-size-12: #{$font-size-12};
+
+  // font weights
+  --font-weight-400: #{$font-weight-400};
+  --font-weight-600: #{$font-weight-600};
+  --font-weight-700: #{$font-weight-700};
+
+  // paddings
+  --padding-700: #{$padding-700};
+  --padding-left-right-768: #{$padding-left-right-768};
+  --padding-left-right-375: #{$padding-left-right-375};
+  --form-page-padding: #{$form-page-padding};
+}

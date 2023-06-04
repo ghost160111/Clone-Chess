@@ -1,0 +1,43 @@
+a {
+  & {
+    text-decoration-line: none;
+    color: var(--basic-white);
+  }
+  &:hover {
+    transition: all 0.3s ease;
+    color: #d8d8d8;
+    filter: opacity(0.7);
+  }
+  &:active {
+    filter: opacity(0.5);
+  }
+}
+
+@mixin link_current($active) {
+  border-bottom: #{$active};
+}
+
+.active-link {
+  color: var(--basic-white);
+  padding-bottom: 5px;
+  @include link_current(
+    $active: 1px solid var(--link-underline)
+  );
+}
+
+.big-active-link {
+  color: var(--basic-white);
+  @include link_current(
+    $active: 3px solid var(--link-underline)
+  );
+}
+
+.active-v2 {
+  @include link_current(
+    $active: 1px solid var(--link-underline)
+  );
+}
+
+.link--text-decoration {
+  text-decoration: underline;
+}

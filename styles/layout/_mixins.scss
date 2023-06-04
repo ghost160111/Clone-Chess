@@ -1,0 +1,41 @@
+// basic layout mixins
+
+@mixin flex-property(
+  $flex-prop: flex,
+  $flex-flow: row,
+  $x: center,
+  $y: center,
+  $wrap: nowrap,
+  $gap: 0
+) {
+  display: #{$flex-prop};
+  flex-flow: #{$flex-flow};
+  justify-content: #{$x};
+  align-items: #{$y};
+  flex-wrap: #{$wrap};
+  gap: #{$gap};
+}
+
+@mixin grid-property(
+  $grid-prop: grid,
+  $grid-template-rows: none,
+  $grid-template-columns: none,
+  $grid-template-areas: none,
+  $gap: 0 0,
+  $grid-row-start: auto,
+  $grid-row-end: auto,
+  $grid-column-start: auto,
+  $grid-column-end: auto,
+  $grid-area: auto
+) {
+  display: #{$grid-prop};
+  grid-template-rows: #{$grid-template-rows};
+  grid-template-columns: #{$grid-template-columns};
+  grid-template-areas: #{$grid-template-areas};
+  gap: #{$gap};
+  grid-row-start: #{$grid-row-start};
+  grid-row-end: #{$grid-row-end};
+  grid-column-start: #{$grid-column-start};
+  grid-column-end: #{$grid-column-end};
+  grid-area: #{$grid-area};
+}

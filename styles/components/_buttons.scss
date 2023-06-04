@@ -1,0 +1,550 @@
+// burger button
+
+.burger-default {
+  width: 19px;
+  height: 14px;
+  background: none;
+  border: none;
+  background: {
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
+}
+
+.burger-on {
+  margin: 0 27px 0 0;
+  background-image: url("/images/burgerOn.svg");
+}
+
+.burger-off {
+  width: 24px;
+  height: 24px;
+  margin: 0 0 4px 0;
+  background-image: url("/images/closeBurger.svg");
+}
+
+.download-pdf-component {
+  & {
+    width: 246px;
+    height: 72px;
+    background: #181818;
+    color: var(--basic-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 12px;
+  }
+  .pdf-icon {
+    width: 30px;
+    height: 40px;
+  }
+  .file-name {
+    font-size: var(--font-size-16);
+    line-height: var(--font-size-24);
+  }
+}
+
+.prize-winner-navigation {
+  & {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 4vw;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+  .listing-btn {
+    & {
+      all: unset;
+      height: 48px;
+      min-width: 250px;
+      border-bottom: 1px solid
+        #3e4142;
+      cursor: pointer;
+      font-size: var(--font-size-18);
+      line-height: var(--font-size-24);
+    }
+    &:hover {
+      background: #2b2c2c;
+      transition: all 0.3s
+        ease;
+    }
+    &:active {
+      border: none;
+      filter: opacity(0.7);
+    }
+  }
+  & > .active {
+    border-bottom: 1px solid
+      var(--link-underline);
+  }
+}
+@media screen and (max-width: 1450px) {
+  .prize-winner-navigation {
+    gap: 0 1vw;
+  }
+}
+@media screen and (max-width: 1261px) {
+  .prize-winner-navigation {
+    & {
+      flex-flow: column;
+      align-items: flex-start;
+      width: 97%;
+      padding-left: 10px;
+    }
+    .listing-btn {
+      width: 100%;
+      border-bottom: none;
+      border-left: 2px solid
+        #3e4142;
+      padding-left: 10px;
+      font-size: var(--font-size-16);
+    }
+    & > .active {
+      border-bottom: none;
+      border-left: 2px solid
+        var(--link-underline);
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .prize-winner-navigation {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-left: 0px;
+  }
+}
+
+.intro-block__settings {
+  & {
+    margin-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    column-gap: 16px;
+  }
+  input {
+    & {
+      all: unset;
+      border-bottom: 1px solid
+        var(--basic-white);
+      width: 100%;
+      max-width: 686px;
+      height: 60px;
+      position: relative;
+      background: {
+        image: url("/images/fi_search.svg");
+        repeat: no-repeat;
+        size: 24px 24px;
+        position: right;
+      }
+    }
+  }
+  .custom-dropdowns {
+    & {
+      display: flex;
+      justify-content: right;
+      gap: 0 24px;
+    }
+    .custom-select--width {
+      width: 260px;
+      margin: 0;
+    }
+    
+  }
+  @media screen and (max-width: 1600px) {
+    .custom-dropdowns {
+      display: none;
+    }
+  }
+}
+
+.custom-dropdown {
+  /* Dropdown Button */
+  .custom-dropbtn {
+    & {
+      color: var(--basic-white);
+      font-size: var(--font-size-18);
+      line-height: var(--font-size-24);
+      width: 260px;
+      height: 60px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      border-bottom: 1px solid var(--basic-white);
+      position: relative;
+      text-align: left;
+    }
+    &::after {
+      content: "";
+      width: 15px;
+      height: 7px;
+      left: 245px;
+      top: 25px;
+      display: flex;
+      position: absolute;
+      background: {
+        image: url("/images/vectorArrowDown.svg");
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+      }
+    }
+    &:focus::after {
+      transition: all 0.3s
+        ease;
+      transform: rotate(
+        180deg
+      );
+    }
+  }
+  /* The container <div> - needed to position the dropdown content */
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .custom-dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px
+      0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    overflow-y: auto;
+    max-height: 100px;
+    background: var(
+      --basic-white
+    );
+    transition: all 1s ease;
+  }
+  @keyframes animation-dropdown {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100px;
+    }
+  }
+  /* Links inside the dropdown */
+  .custom-dropdown-content {
+    a {
+      color: var(--black-font-color);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+  }
+  /* Change color of dropdown links on hover */
+  .custom-dropdown-content {
+    a:hover {
+      background-color: var(--custom-dropdown-hover);
+    }
+  }
+  /* Show the dropdown menu (use JS to add this class to the .custom-dropdown-content container when the user clicks on the dropdown button) */
+  .show {
+    display: block;
+    animation: animation-dropdown
+      0.1s ease-in;
+  }
+}
+
+// custom-popup
+
+.custom-popup {
+  display: none;
+  background: none;
+  .custom-popup__btn {
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: 1px solid var(--basic-white);
+    background: {
+      image: url("/images/settings.svg");
+      repeat: no-repeat;
+      size: 16px 16px;
+      position: center;
+    }
+  }
+}
+@media screen and (max-width: 1600px) {
+  .custom-popup {
+    display: block;
+  }
+}
+
+.custom-popup-layout {
+  & {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 100%;
+    height: 348px;
+    margin: 0 auto;
+    padding-left: 160px;
+    padding-right: 160px;
+    position: fixed;
+    left: 0;
+    top: 100px;
+    background: none;
+  }
+}
+
+.popup-submit-btn {
+  all: unset;
+  height: 48px;
+  width: 98%;
+  background: #ebab07;
+  border: none;
+  font-family: #{$family-2};
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-700);
+  line-height: var(--font-size-24);
+  text-align: center;
+  margin: 10px;
+  color: black;
+}
+
+@media screen and (max-width: 1000px) {
+  .custom-popup-layout {
+    padding: 0;
+    height: 343px;
+  }
+}
+.custom-popup-layout {
+  display: none;
+}
+
+.custom-popup-layout-wrap {
+  background: var(--background-color);
+  padding: 25px;
+}
+
+.close-sorting {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sorting {
+  & {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    position: relative;
+  }
+  & > h3 {
+    font-family: #{$family-2};
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-700);
+    line-height: var(--font-size-40);
+  }
+}
+
+// custom select options
+// custom select menu
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  color: var(--basic-white);
+  margin: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid
+    var(--basic-white);
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  color: var(--basic-white);
+  background: none;
+  cursor: pointer;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid
+    transparent;
+  border-color: var(
+      --basic-white
+    )
+    transparent transparent
+    transparent;
+}
+
+.select-selected {
+  color: var(--basic-white);
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  transform: rotate(180deg)
+    translateY(7px);
+  //border-color: transparent transparent black transparent;
+  transition: all 0.3s ease;
+  //top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div {
+  color: black;
+  padding: 8px 16px;
+  border: 1px solid
+    transparent;
+  border-color: transparent
+    transparent
+    rgba(0, 0, 0, 0.1)
+    transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: var(
+    --basic-white
+  );
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.1
+  );
+}
+
+// input label
+
+.form-item-search {
+  & {
+    position: relative;
+    width: 100%;
+  }
+  & > label {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    color: var(--form-label-color);
+    transform: translateY(
+      -50%
+    );
+    transition: all 0.3s ease;
+  }
+  & > input {
+    &:focus + label,
+    &:valid + label {
+      color: var(
+        --basic-white
+      );
+      font-size: 16px;
+      transform: translateY(
+        -150%
+      );
+    }
+    &::-webkit-input-placeholder {
+      filter: opacity(0);
+    }
+    &:focus::-webkit-input-placeholder {
+      filter: opacity(1);
+    }
+  }
+}
+
+// table pagination buttons
+
+div.pager {
+  & {
+    text-align: center;
+    margin: 1em 0;
+    position: relative;
+  }
+  & > button {
+    display: inline-block;
+    font-family: #{$family-3};
+    width: 64px;
+    height: 64px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid var(--home-news-card-border-top-color);
+    border-radius: 6px;
+    line-height: 1.8;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    color: var(--basic-white);
+    margin-right: 20px;
+  }
+  & > button.pg-selected {
+    background: var(
+      --link-underline
+    );
+    color: var(--black-font-color);
+  }
+  & > .pg-goto:first-child,
+  & > .pg-goto:last-child {
+    font-size: 25px;
+    position: relative;
+    top: 2.4px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  div.pager {
+    & {
+      margin: 1px;
+    }
+    & > button {
+      width: 48px;
+      height: 48px;
+      font-size: var(--font-size-16);
+      margin-right: 10px;
+    }
+    & > .pg-goto:first-child,
+    & > .pg-goto:last-child {
+      top: 4.4px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  div.pager {
+    & > button {
+      width: 32px;
+      height: 32px;
+      font-size: var(--font-size-12);
+      line-height: var(--font-size-16);
+      margin-right: 5px;
+    }
+    & > .pg-goto:first-child,
+    & > .pg-goto:last-child {
+      font-size: 15px;
+      top: 1.4px;
+    }
+  }
+}

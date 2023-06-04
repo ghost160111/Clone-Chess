@@ -1,0 +1,306 @@
+.about {
+  margin: 6vw 0 6vw 0;
+}
+
+.tournament-section {
+  & {
+    padding: 0 calc(50% - 700px);
+    margin-left: 10px;
+  }
+  .tournament-section__title {
+    @extend .h2_v1;
+    padding: 0px 0px 10px 28px;
+  }
+  .tournament-section__description {
+    font-size: var(--font-size-24);
+    line-height: var(--font-size-40);
+    text-align: center;
+    padding: 0px calc(50% - 506px);
+    padding-bottom: 40px;
+  }
+  .tournament-section__intro-block {
+    & {
+      width: 100%;
+      @include flex-property(
+        $flex-flow: column,
+      );
+    }
+    .tournament-section__intro-block__img {
+      width: 72.73vw;
+      height: 32.6vw;
+    }
+    .tournament-section__intro-block__title {
+      font-size: var(--font-size-40);
+      line-height: var(--font-size-48);
+      font-weight: var(--font-weight-600);
+      padding: 73px 299px 31px 0px;
+    }
+    .tournament-section__intro-block__description {
+      font-size: var(--font-size-24);
+      line-height: var(--font-size-40);
+      padding: 0px 262px 0px 0px;
+    }
+    @media screen and (max-width: 1200px) {
+      .tournament-section__intro-block__img {
+        width: 100%;
+        height: 100%;
+      }
+      .tournament-section__intro-block__title {
+        padding: 73px 100px 31px 0px;
+        font-size: 24px;
+        line-height: 32px;
+      }
+      .tournament-section__intro-block__description {
+        padding: 0px 120px 0px 0px;
+        font-size: var(--font-size-16);
+        line-height: var(--font-size-24);
+      }
+      @media screen and (max-width: 700px) {
+        .tournament-section__intro-block__title {
+          padding: 50px 0 16px 0;
+        }
+        .tournament-section__intro-block__description {
+          padding: 0;
+        }
+      }
+    }
+  }
+  .tournament-section__article {
+    & {
+      display: flex;
+      flex-flow: column;
+      gap: 72px 0;
+      margin-top: 53px;
+      margin-bottom: 48px;
+    }
+    .article__block {
+      & {
+        display: flex;
+      }
+      .article__block__1 {
+        .article__block__1__title {
+          @extend .h3;
+        }
+        .article__block__1__paragraph {
+          font-size: var(--font-size-24);
+          line-height: var(--font-size-32);
+        }
+      }
+      .article__block__2 {
+        .article__block__2__img {
+          width: 35.4vw;
+          height: 29.1vw;
+        }
+      }
+    }
+    .article__block:nth-child(odd) {
+      & {
+        flex-flow: row;
+      }
+      .article__block__1 {
+        & {
+          //padding: 5.6942vw 12.7925vw 0 0;
+          padding: 73px 164px 0px 0px;
+        }
+        .article__block__1__title {
+          padding: 0px 0px 19px 0px;
+        }
+      }
+    }
+    .article__block:nth-child(even) {
+      & {
+        flex-flow: row-reverse;
+      }
+      .article__block__1 {
+        & {
+          padding: 58px 0px 0px 152px;
+        }
+        .article__block__1__title {
+          padding: 0px 0px 18px 0px;
+        }
+      }
+    }
+    @media screen and (max-width: 1440px) {
+      .article__block:nth-child(odd),
+      .article__block:nth-child(even) {
+        .article__block__1 {
+          .article__block__1__title {
+            font-size: var(--font-size-48);
+            line-height: var(--font-size-48);
+          }
+          .article__block__1__paragraph {
+            font-size: var(--font-size-16);
+            line-height: var(--font-size-24);
+          }
+        }
+      }
+      .article__block:nth-child(odd) {
+        .article__block__1 {
+          padding: 0 50px 0 0;
+        }
+      }
+      .article__block:nth-child(even) {
+        .article__block__1 {
+          padding: 0 0 0 50px;
+        }
+      }
+    }
+    @media screen and (max-width: 700px) {
+      .article__block:nth-child(odd),
+      .article__block:nth-child(even) {
+        & {
+          flex-flow: column;
+        }
+        .article__block__1 {
+          padding: 0;
+        }
+        .article__block__2 {
+          .article__block__2__img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1475px) {
+  .tournament-section {
+    & {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .tournament-section__title {
+      font-size: var(--font-size-96);
+      line-height: var(--font-size-96);
+    }
+    .tournament-section__description {
+      line-height: 32px;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .tournament-section {
+    padding-left: var(--padding-left-right-768);
+    padding-right: var(--padding-left-right-768);
+  }
+}
+@media screen and (max-width: 768px) {
+  .tournament-section {
+    .tournament-section {
+      padding-left: var(--padding-left-right-375);
+      padding-right: var(--padding-left-right-375);
+    }
+    .tournament-section__title {
+      font-size: var(--font-size-48);
+      line-height: var(--font-size-48);
+      padding: 0;
+    }
+    .tournament-section__description {
+      font-size: var(--font-size-16);
+      line-height: var(--font-size-24);
+      padding: 0;
+    }
+  }
+}
+
+.home__info__our-partners-section {
+  & {
+    padding: 0 calc(50% - 44vw);
+  }
+  .home__info__our-partners-section__header {
+    & {
+      margin-bottom: 44px;
+    }
+    .home__info__our-partners-section__header__title {
+      @extend .h2;
+      font-size: 6.67vw;
+    }
+    @media only screen and (max-width: 1200px) {
+      .home__info__our-partners-section__header__title {
+        font-size: var(--font-size-64);
+        line-height: var(--font-size-64);
+      }
+      @media only screen and (max-width: 600px) {
+        .home__info__our-partners-section__header__title {
+          font-size: var(--font-size-32);
+          line-height: var(--font-size-32);
+        }
+      }
+    }
+  }
+  .home__info__our-partners-section__list {
+    & {
+      display: grid;
+      grid-template-areas: '1 2 3';
+      gap: 2.4vw 2.4vw;
+      //gap: 47px 46px;
+    }
+    li {
+      .home__info__our-partners-section__list__box {
+        & {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 2px solid #3E4142;
+          //width: 530px;
+          //height: 280px;
+          width: 27.6vw;
+          height: 14.6vw;
+        }
+        &:hover {
+          filter: opacity(0.6);
+          transition: all 0.5s ease;
+        }
+        .company-logo {
+          filter: grayscale(1);
+        }
+      }
+      @media only screen and (max-width: 1280px) {
+        .home__info__our-partners-section__list__box {
+          & {
+            min-width: 224px;
+            min-height: 140px;
+          }
+          .company-logo {
+            transform: scale(0.5);
+          }
+        }
+        @media only screen and (max-width: 500px) {
+          .home__info__our-partners-section__list__box {
+            & {
+              min-width: 160px;
+              max-width: 224px;
+              min-height: 120px;
+              max-height: 140px;
+            }
+            .company-logo {
+              transform: scale(0.4);
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 786px) {
+    .home__info__our-partners-section__list {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+    }
+  }
+}
+@media only screen and (max-width: 1315px) {
+  .home__info__our-partners-section {
+    padding-top: 50px;
+    padding-left: var(--padding-left-right-768);
+    padding-right: var(--padding-left-right-768);
+  }
+  @media only screen and (max-width: 786px) {
+    .home__info__our-partners-section {
+      padding-top: 50px;
+      padding-left: var(--padding-left-right-375);
+      padding-right: var(--padding-left-right-375);
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "../styles/layout/_layout";
+@import "../styles/variables/_variables";
+@import "../styles/typography/_typography";
+@import "../styles/components/_components";
+@import "../styles/links/_links";
+@import "../styles/pages/_pages";
+@import "../styles/modal/_modal";
+
+* {
+  & {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: var(--background-color); 
+  }
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    & {
+      background: var(--scrollbar-color); 
+    }
+    &:hover {
+      background: var(--scrollbar-hover);
+    }
+    &:active {
+      background: var(--scrollbar-active);
+    }
+  }
+}
+
+html {
+  & {
+    background: var(--background-color);
+    color: var(--basic-white);
+    @extend .basic-font-style;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    & {
+      display: block;
+      background-color: var(--background-color);
+      background: var(--background-color);
+      color: var(--basic-white);
+      @extend .basic-font-style;
+    }
+    ul,
+    ol,
+    dl {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

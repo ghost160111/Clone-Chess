@@ -1,0 +1,133 @@
+// Tablet navigation bar
+
+.tablet-nav {
+  & {
+    min-height: 64px;
+  }
+}
+
+.tablet-nav__list-left {
+  & {
+    margin: 0 0 0 12px;
+    @extend .tablet-regular;
+    @include flex-property(
+      $x: flex-start,
+      $gap: 0px 21px
+    );
+  }
+}
+.tablet-nav__list-middle {
+  & {
+    @include flex-property();
+  }
+}
+.tablet-nav__right-block {
+  & {
+    @include flex-property(
+      $x: flex-end,
+      $y: center
+    );
+  }
+  .tablet-nav__right-block__burger {
+    .tablet-nav__right-block__burger__btn-open {
+      @extend .burger-default;
+      @extend .burger-on;
+    }
+  }
+  .tablet-nav__right-block__list {
+    & {
+      z-index: 100;
+      padding: 23px 0 0 0;
+      background: var(--background-color);
+      min-width: 360px;
+      min-height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      @include flex-property(
+        $flex-prop: none,
+        $flex-flow: column,
+        $x: flex-start,
+        $y: center,
+      );
+    }
+    @keyframes burger-animation {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    li {
+      width: 100%;
+    }
+    & > li:first-child,
+    & > li:last-child {
+      width: 86.6%;
+    }
+    & > li:first-child {
+      & {
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+        padding: 0 0 32px 0;
+      }
+      .tablet-nav__right-block__list__sub-block {
+        & {
+          @include flex-property(
+            $x: flex-start,
+            $y: center,
+            $gap: 0 230px
+          );
+        }
+        .tablet-nav__right-block__list__sub-block__btn-close {
+          @extend .burger-default;
+          @extend .burger-off;
+        }
+      }
+    }
+    & > li:last-child {
+      border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+      padding: 30px 0 0 0;
+    }
+    & > .middle-child {
+      .middle-child__list {
+        & {
+          display: flex;
+          flex-flow: column;
+          padding: 20px 0 18px 0;
+        }
+        li {
+          & {
+            width: 100%;
+            height: 48px;
+            @include flex-property($x: flex-start);
+          }
+        }
+        li:first-child,
+        li:last-child {
+          border: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.tablet-nav__right-block__list__link {
+  & {
+    width: 100%;
+    height: 100%;
+    padding: 10px 24px 0 24px;
+  }
+  &:hover {
+    background: var(--link-underline);
+    color: black;
+    border: none;
+  }
+  &:active {
+    filter: opacity(0.7);
+  }
+}
+
+
+

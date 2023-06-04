@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+// font-family: 'Raleway', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+// font-family: 'Manrope', sans-serif;
+
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: local('Bebas Neue Thin'), local('BebasNeue-Thin'), url('/fonts/bebasneue/bebasneuethin.woff2') format('woff2'), url('/fonts/bebasneue/bebasneuethin.woff') format('woff'), url('/fonts/bebasneue/bebasneuethin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: local('Bebas Neue Light'), local('BebasNeue-Light'), url('/fonts/bebasneue/bebasneuelight.woff2') format('woff2'), url('/fonts/bebasneue/bebasneuelight.woff') format('woff'), url('/fonts/bebasneue/bebasneuelight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: local('Bebas Neue Book'), local('BebasNeueBook'), url('/fonts/bebasneue/bebasneuebook.woff2') format('woff2'), url('/fonts/bebasneue/bebasneuebook.woff') format('woff'), url('/fonts/bebasneue/bebasneuebook.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: local('Bebas Neue Regular'), local('BebasNeueRegular'), url('/fonts/bebasneue/bebasneueregular.woff2') format('woff2'), url('/fonts/bebasneue/bebasneueregular.woff') format('woff'), url('/fonts/bebasneue/bebasneueregular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: local('Bebas Neue Bold'), local('BebasNeueBold'), url('/fonts/bebasneue/bebasneuebold.woff2') format('woff2'), url('/fonts/bebasneue/bebasneuebold.woff') format('woff'), url('/fonts/bebasneue/bebasneuebold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+$family-1: 'Raleway', sans-serif;
+$family-2: 'Bebas Neue';
+$family-3: 'Manrope';
+
+@mixin typography($font-family, $font-size, $font-weight, $line-height, $text-align) {
+  font-family: #{$font-family};
+  font-size: #{$font-size};
+  font-weight: #{$font-weight};
+  line-height: #{$line-height};
+  text-align: #{$text-align};
+}
+
+.basic-font-style {
+  font: {
+    family: #{$family-1};
+    style: normal;
+    weight: var(--font-weight-400);
+    size: var(--font-size-18);
+  }
+}
+
+.h1 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: var(--font-size-144),
+    $font-weight: var(--font-weight-700),
+    $line-height: var(--font-size-144),
+    $text-align: center
+  );
+}
+
+.h1-below {
+  @include typography(
+    $font-family: #{$family-1},
+    $font-size: var(--font-size-40),
+    $font-weight: 300,
+    $line-height: 46.96px,
+    $text-align: center
+  );
+}
+
+.h2 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: var(--font-size-128),
+    $font-weight: var(--font-weight-700),
+    $line-height: var(--font-size-128),
+    $text-align: left
+  );
+}
+
+.h2_v1 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: var(--font-size-112),
+    $font-weight: var(--font-weight-700),
+    $line-height: var(--font-size-112),
+    $text-align: center
+  );
+}
+
+.h2_v2 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: 104px,
+    $font-weight: 700,
+    $line-height: 104px,
+    $text-align: left
+  );
+}
+
+.h2_v2_v2 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: 96px,
+    $font-weight: 700,
+    $line-height: 96px,
+    $text-align: left
+  );
+}
+
+.h2_v3_v1 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: 80px,
+    $font-weight: 700,
+    $line-height: 80px,
+    $text-align: center
+  );
+}
+
+.h2_v3 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: 72px,
+    $font-weight: 700,
+    $line-height: 80px,
+    $text-align: center
+  );
+}
+
+.h3 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: 64px,
+    $font-weight: 700,
+    $line-height: 64px,
+    $text-align: left
+  );
+}
+
+.h3_v2 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: 56px,
+    $font-weight: 700,
+    $line-height: 56px,
+    $text-align: left
+  );
+}
+
+.h4 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: 48px,
+    $font-weight: 400,
+    $line-height: 48px,
+    $text-align: left
+  );
+}
+
+.h4_v2 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: 40px,
+    $font-weight: 400,
+    $line-height: 48px,
+    $text-align: left
+  );
+}
+
+.h4_v3 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: 48px,
+    $font-weight: 700,
+    $line-height: 48px,
+    $text-align: left
+  );
+}
+
+.h4_v4 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: 40px,
+    $font-weight: 700,
+    $line-height: 40px,
+    $text-align: left,
+  )
+}
+
+.h5 {
+  @include typography(
+    $font-family: #{$family-1},
+    $font-size: 32px,
+    $font-weight: 600,
+    $line-height: 40px,
+    $text-align: left
+  );
+}
+
+.h5_v2 {
+  @include typography(
+    $font-family: #{$family-2},
+    $font-size: 32px,
+    $font-weight: 700,
+    $line-height: 32px,
+    $text-align: left
+  );
+}
+
+.h5_v3 {
+  @include typography(
+    $font-family: #{$family-1},
+    $font-size: 32px,
+    $font-weight: 500,
+    $line-height: 40px,
+    $text-align: left
+  );
+}
+
+.h5_v3_v2 {
+  @include typography(
+    $font-family: #{$family-1},
+    $font-size: 70px,
+    $font-weight: 300,
+    $line-height: 70px,
+    $text-align: left
+  );
+}
+
+.h6 {
+  @include typography(
+    $font-family: #{$family-1},
+    $font-size: 24px,
+    $font-weight: 600,
+    $line-height: 32px,
+    $text-align: left
+  );
+}
+
+.h6_v2 {
+  @include typography(
+    $font-family: #{$family-1},
+    $font-size: 24px,
+    $font-weight: 400,
+    $line-height: 32px,
+    $text-align: left
+  );
+}
+
+.date {
+  @include typography(
+    $font-family: #{$family-1},
+    $font-size: 21.5px,
+    $font-weight: 400,
+    $line-height: 24px,
+    $text-align: left
+  );
+}
+
+.tablet-regular {
+  @include typography(
+    $font-family: #{$family-1},
+    $font-size: 14px,
+    $font-weight: 500,
+    $line-height: 18px,
+    $text-align: left
+  );
+}
+

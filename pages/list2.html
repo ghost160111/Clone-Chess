@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Шахмат - Список участников</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="header__wrapper">
+            <nav class="nav">
+                <ul class="nav__list-left">
+                    <li><a class="nav__list-left__link" href="/pages/about.html" title="О турнире">О
+                            турнире</a></li>
+                    <li><a class="nav__list-left__link active-link" href="/pages/list.html"
+                            title="Список участников">Список участников</a></li>
+                    <li><a class="nav__list-left__link" href="/pages/rules.html" title="Правила">Правила</a></li>
+                    <li><a class="nav__list-left__link" href="/pages/prizeFond.html" title="Призовой фонд">Призовой
+                            фонд</a></li>
+                </ul>
+                <ul class="nav__list-middle">
+                    <li>
+                        <a class="nav__list-middle__link logo" href="/index.html" title="Главная страница">
+                            <img class="nav__list-middle__link__logo logo__img" src="/images/logo.svg" alt="logo icon">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav__list-right">
+                    <li><a class="nav__list-right__link" href="/pages/winners.html" title="Победители">Победители</a>
+                    </li>
+                    <li><a class="nav__list-right__link" href="/pages/news.html" title="Новости">Новости</a>
+                    </li>
+                    <li><a class="nav__list-right__link" href="/pages/form.html" title="Обратная связь">Обратная
+                            связь</a></li>
+                    <li class="language-choose dropdown">
+                        <button class="nav__list-right__link" type="button" id="dropdownMenuButton"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            Русский
+                        </button>
+                        <ul class="nav__list-right__list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="nav__list-right__list__languages dropdown-item" href="#">O'zbekcha</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="tablet-nav" id="tablet-nav">
+                <ul class="tablet-nav__list-left" id="nav-list-left">
+                    <li><a class="tablet-nav__list-left" href="/pages/about.html">О турнире</a></li>
+                    <li><a class="tablet-nav__list-left active-link" href="/pages/list.html">Список участников</a></li>
+                </ul>
+                <ul class="tablet-nav__list-middle" id="nav-list-middle">
+                    <li>
+                        <a class="tablet-nav__list-middle__link logo" href="/index.html" title="Главная страница">
+                            <img class="tablet-nav__list-middle__link__logo logo__img" src="/images/logo.svg"
+                                alt="logo icon">
+                        </a>
+                    </li>
+                </ul>
+                <div class="tablet-nav__right-block">
+                    <div class="tablet-nav__right-block__burger">
+                        <button class="tablet-nav__right-block__burger__btn-open" id="burger" type="button"
+                            title="Открыть меню" onclick="burger('flex', 'blur(4px)')"></button>
+                    </div>
+                    <ul class="tablet-nav__right-block__list sidebar--animation" id="sidebar">
+                        <li>
+                            <div class="tablet-nav__right-block__list__sub-block">
+                                <a class="tablet-nav__right-block__list__sub-block__link logo" href=""
+                                    title="Главная страница">
+                                    <img class="logo__img" src="/images/logo.svg" alt="logo">
+                                </a>
+                                <button class="tablet-nav__right-block__list__sub-block__btn-close" type="button"
+                                    title="Закрыть меню" onclick="burger('none', 'blur(0px)')"></button>
+                            </div>
+                        </li>
+                        <li class="middle-child">
+                            <ul class="middle-child__list">
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/about.html">О
+                                        турнире</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/list.html">Список
+                                        участников</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/rules.html">Правила</a>
+                                </li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/prizeFond.html">Призовой
+                                        фонд</a></li>
+                                <li><a class="tablet-nav__right-block__list__link"
+                                        href="/pages/winners.html">Победители</a></li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/news.html">Новости</a>
+                                </li>
+                                <li><a class="tablet-nav__right-block__list__link" href="/pages/form.html">Обратная
+                                        связь</a></li>
+                            </ul>
+                        </li>
+                        <li class="language-choose dropdown">
+                            <button class="nav__list-right__link" type="button" id="dropdownMenuButton"
+                                data-mdb-toggle="dropdown" aria-expanded="false">
+                                Русский
+                            </button>
+                            <ul class="nav__list-right__list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="nav__list-right__list__languages dropdown-item" href="">O'zbekcha</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content" id="content">
+        <div class="participants">
+            <div class="participants__intro-block">
+                <div class="intro-block__navigation">
+                    <ul class="intro-block__navigation__list">
+                        <li><a class="intro-block__navigation__list__link" href="/pages/list.html">Регистрация</a></li>
+                        <li><a class="intro-block__navigation__list__link big-active-link"
+                                href="/pages/list2.html">Отборочный тур</a>
+                        </li>
+                        <li><a class="intro-block__navigation__list__link" href="/pages/list3.html">Профессионалы</a>
+                        </li>
+                    </ul>
+                </div>
+                <article class="intro-block__description">
+                    <p class="intro-block__description__paragraph intro-block__description__paragraph-1--padding">
+                        Отборочный этап турнира пройдет онлайн
+                        на платформе chess.com в форме блиц (3+2), 
+                    </p>
+                </article>
+                <div class="intro-block__settings">
+                    <div class="form-item-search">
+                        <input class="custom-input-search" type="search" placeholder="Введите ID или ФИО участника"
+                            name="search input button" id="search-participants" required>
+                        <label for="search-participants">Введите ID или ФИО участника</label>
+                    </div>
+                    <div class="custom-dropdowns">
+                        <div class="custom-select custom-select--width">
+                            <select>
+                                <option value="0">Категория</option>
+                                <option value="1">Категория 1</option>
+                                <option value="2">Категория 2</option>
+                                <option value="3">Категория 3</option>
+                                <option value="4">Категория 4</option>
+                                <option value="5">Категория 5</option>
+                                <option value="6">Категория 6</option>
+                                <option value="7">Категория 7</option>
+                                <option value="8">Категория 8</option>
+                                <option value="9">Категория 9</option>
+                                <option value="10">Категория 10</option>
+                                <option value="11">Категория 11</option>
+                                <option value="12">Категория 12</option>
+                            </select>
+                        </div>
+                        <div class="custom-select custom-select--width">
+                            <select>
+                                <option value="0">Все страны</option>
+                                <option value="1">Страна 1</option>
+                                <option value="2">Страна 2</option>
+                                <option value="3">Страна 3</option>
+                                <option value="4">Страна 4</option>
+                                <option value="5">Страна 5</option>
+                                <option value="6">Страна 6</option>
+                                <option value="7">Страна 7</option>
+                                <option value="8">Страна 8</option>
+                                <option value="9">Страна 9</option>
+                                <option value="10">Страна 10</option>
+                                <option value="11">Страна 11</option>
+                                <option value="12">Страна 12</option>
+                            </select>
+                        </div>
+                        <div class="custom-select custom-select--width">
+                            <select>
+                                <option value="0">Район</option>
+                                <option value="1">Район 1</option>
+                                <option value="2">Район 2</option>
+                                <option value="3">Район 3</option>
+                                <option value="4">Район 4</option>
+                                <option value="5">Район 5</option>
+                                <option value="6">Район 6</option>
+                                <option value="7">Район 7</option>
+                                <option value="8">Район 8</option>
+                                <option value="9">Район 9</option>
+                                <option value="10">Район 10</option>
+                                <option value="11">Район 11</option>
+                                <option value="12">Район 12</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="custom-popup">
+                        <button class="custom-popup__btn" type="button" onclick="openPopup()"></button>
+                    </div>
+                </div>
+                <div id="popup" class="custom-popup-layout">
+                    <form class="custom-popup-layout-wrap" action="">
+                        <div class="close-sorting">
+                            <span></span>
+                            <span>
+                                <img src="/images/closeBurger.svg" alt="close sort block" onclick="closePopup()">
+                            </span>
+                        </div>
+                        <div class="sorting">
+                            <h3>Сортировка</h3>
+                        </div>
+                        <div class="custom-select">
+                            <select>
+                                <option value="0">Категория</option>
+                                <option value="1">Категория 1</option>
+                                <option value="2">Категория 2</option>
+                                <option value="3">Категория 3</option>
+                                <option value="4">Категория 4</option>
+                                <option value="5">Категория 5</option>
+                                <option value="6">Категория 6</option>
+                                <option value="7">Категория 7</option>
+                                <option value="8">Категория 8</option>
+                                <option value="9">Категория 9</option>
+                                <option value="10">Категория 10</option>
+                                <option value="11">Категория 11</option>
+                                <option value="12">Категория 12</option>
+                            </select>
+                        </div>
+                        <div class="custom-select">
+                            <select>
+                                <option value="0">Все страны</option>
+                                <option value="1">Страна 1</option>
+                                <option value="2">Страна 2</option>
+                                <option value="3">Страна 3</option>
+                                <option value="4">Страна 4</option>
+                                <option value="5">Страна 5</option>
+                                <option value="6">Страна 6</option>
+                                <option value="7">Страна 7</option>
+                                <option value="8">Страна 8</option>
+                                <option value="9">Страна 9</option>
+                                <option value="10">Страна 10</option>
+                                <option value="11">Страна 11</option>
+                                <option value="12">Страна 12</option>
+                            </select>
+                        </div>
+                        <div class="custom-select">
+                            <select>
+                                <option value="0">Район</option>
+                                <option value="1">Район 1</option>
+                                <option value="2">Район 2</option>
+                                <option value="3">Район 3</option>
+                                <option value="4">Район 4</option>
+                                <option value="5">Район 5</option>
+                                <option value="6">Район 6</option>
+                                <option value="7">Район 7</option>
+                                <option value="8">Район 8</option>
+                                <option value="9">Район 9</option>
+                                <option value="10">Район 10</option>
+                                <option value="11">Район 11</option>
+                                <option value="12">Район 12</option>
+                            </select>
+                        </div>
+                        <button class="popup-submit-btn" type="submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <section class="participants__par-list-table-section">
+                <table class="participants-table paginated">
+                    <thead>
+                        <tr class="table-row">
+                            <th class="table-header-cell">№</th>
+                            <th class="table-header-cell">ID</th>
+                            <th class="table-header-cell">ФИО УЧАСТНИКА</th>
+                            <th class="table-header-cell">РЕГИОН</th>
+                            <th class="table-header-cell">РАЙОН</th>
+                            <th class="table-header-cell">КАТЕГОРИЯ</th>
+                            <th class="table-header-cell">РЕГИСТРАЦИЯ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">1</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">2</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">3</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">4</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">5</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">6</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">7</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">8</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">9</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">10</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">11</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">12</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">13</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">14</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">15</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">16</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">17</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">18</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">19</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">20</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">21</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">22</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">23</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">24</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">25</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">26</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">27</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">28</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">29</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">30</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">31</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">32</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">33</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">34</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">35</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">36</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">37</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">38</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">39</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="table-data-cell" data-th="№">40</td>
+                            <td class="table-data-cell" data-th="ID">1101169852</td>
+                            <td class="table-data-cell" data-th="ФИО УЧАСТНИКА">Пулатов Мавлонбек Мухторжон угли</td>
+                            <td class="table-data-cell" data-th="РЕГИОН">Андижанская обл.</td>
+                            <td class="table-data-cell" data-th="РАЙОН">Асакинский</td>
+                            <td class="table-data-cell" data-th="КАТЕГОРИЯ">Любитель</td>
+                            <td class="table-data-cell" data-th="РЕГИСТРАЦИЯ">25.10.2022, 19:55</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="footer__wrapper">
+            <div class="footer__block-1">
+                <ul class="block-1__list">
+                    <li><a class="block-1__list__link" href="/pages/about.html">О турнире</a></li>
+                    <li><a class="block-1__list__link" href="/pages/rules.html">Правила</a></li>
+                    <li><a class="block-1__list__link" href="/pages/winners.html">Победители</a></li>
+                    <li><a class="block-1__list__link" href="/pages/form.html">Обратная связь</a></li>
+                    <li><a class="block-1__list__link" href="/pages/list.html">Список участников</a></li>
+                    <li><a class="block-1__list__link" href="/pages/prizeFond.html">Призовой фонд</a></li>
+                    <li><a class="block-1__list__link" href="/pages/news.html">Новости</a></li>
+                </ul>
+            </div>
+            <div class="footer__block-2">
+                <ul class="block-2__list">
+                    <li><a class="block-2__list__tel-us" href="tel:+998970000000" title="Позвонить">+998970000000</a>
+                    </li>
+                    <li><a class="block-2__list__email-us" href="mailto:help@chess-tashkent.uz"
+                            title="Написать email">help@chess-tashkent.uz</a></li>
+                </ul>
+                <ul class="block-2__list-2">
+                    <li><a class="block-2__list-2__link" href="https://www.tashkent.uz/"><img
+                                src="/images/logoFooter.svg" alt=""></a></li>
+                    <li><a class="block-2__list-2__link" href="https://digitaltashkent.uz/"><img
+                                src="/images/logoFooter2.svg" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="footer__block-3">
+                <ul class="block-3__list">
+                    <li><a class="block-3__list__link" href="https://www.tashkent.uz/"><img src="/images/logoFooter.svg"
+                                alt=""></a></li>
+                    <li><a class="block-3__list__link" href="https://digitaltashkent.uz/"><img
+                                src="/images/logoFooter2.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom-block">
+            <span class="footer__bottom-block__acknowlegdement">
+                При полном или частичном использовании и цитировании материалов, опубликованных на сайте <a
+                    class="link--text-decoration" href="https://chess.tashkent.uz/">сhess.tashkent.uz</a>, ссылка
+                обязательна
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/scripts/burgerMenu.js"></script>
+    <script src="/scripts/slider.js"></script>
+    <script src="/scripts/customDropdown.js"></script>
+    <script src="/scripts/tablePagination.js"></script>
+    <script src="/scripts/popup.js"></script>
+    <script src="/scripts/customSelect.js"></script>
+</body>
+
+</html>
